@@ -1,0 +1,2809 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOKESH NAIDU | Curated Product Recommendations & Buying Guides</title>
+    <meta name="description" content="Discover carefully selected products, practical buying guides, and research-based overviews across electronics, home, fitness, books, clothing, and outdoor gear by Lokesh Deenadayalan Naidu.">
+    <meta name="keywords" content="Lokesh Naidu, Lokesh Deenadayalan Naidu, Product Recommendations, Buying Guides, Tech Reviews, Home Essentials, Outdoor Gear">
+    <meta name="author" content="Lokesh Deenadayalan Naidu">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="LOKESH NAIDU | Curated Product Recommendations & Buying Guides">
+    <meta property="og:description" content="Practical buying recommendations and everyday product discoveries by Lokesh Deenadayalan Naidu.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://migweb.github.io/Lokesh-Naidu/lokesh.png">
+    <link rel="canonical" href="https://yourdomain.com/">
+
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FF9900',
+                            orangeHover: '#E68A00',
+                            navy: '#232F3E',
+                            navyLight: '#37475A',
+                            bg: '#FFFFFF',
+                            surface: '#F7F8FA',
+                            text: '#222222',
+                            muted: '#707070',
+                            border: '#E5E7EB'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    maxWidth: {
+                        '8xl': '1440px'
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(35, 47, 62, 0.06)',
+                        'card': '0 10px 30px -5px rgba(35, 47, 62, 0.08)',
+                        'float': '0 15px 35px -5px rgba(35, 47, 62, 0.14)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Animations & Refinements -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #222222;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes floatDelayed {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        .animate-float-slow {
+            animation: floatSlow 5s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: floatDelayed 6s ease-in-out 1.5s infinite;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-up {
+            animation: fadeUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F7F8FA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94A3B8;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-orange/20 selection:text-brand-navy flex flex-col min-h-screen">
+
+    <!-- Top Affiliate Disclosure Bar -->
+    <div class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4 border-b border-white/10">
+        <div class="max-w-8xl mx-auto flex items-center justify-center sm:justify-start text-center sm:text-left">
+            <p class="text-gray-200 font-normal">
+                <i class="fa-solid fa-circle-info text-brand-orange mr-1.5"></i>
+                <strong class="font-semibold text-white">Affiliate Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases.
+            </p>
+        </div>
+    </div>
+
+    <!-- Sticky Responsive Header & Navigation -->
+    <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border transition-shadow duration-300">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Left: Personal Brand Logo -->
+                <a href="#home" onclick="navigateTo('home'); return false;" class="flex items-center gap-3 group focus:outline-none" aria-label="Lokesh Naidu Home">
+                    <div class="w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white font-heading font-extrabold text-lg shadow-sm group-hover:bg-brand-orange transition-colors duration-300">
+                        LN
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-heading font-extrabold text-lg sm:text-xl tracking-tight text-brand-navy leading-none">
+                            LOKESH NAIDU
+                        </span>
+                        <span class="text-[11px] font-medium text-brand-muted tracking-wider uppercase mt-0.5">
+                            Curated Recommendations
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Center: Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Primary Navigation">
+                    <a href="#home" data-nav="home" onclick="navigateTo('home'); return false;" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-brand-text hover:text-brand-orange hover:bg-brand-surface transition-colors">Home</a>
+                    <a href="#categories" data-nav="categories" onclick="navigateTo('categories'); return false;" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-brand-text hover:text-brand-orange hover:bg-brand-surface transition-colors">Categories</a>
+                    <a href="#reviews" data-nav="reviews" onclick="navigateTo('reviews'); return false;" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-brand-text hover:text-brand-orange hover:bg-brand-surface transition-colors">Product Reviews</a>
+                    <a href="#buying-guides" data-nav="buying-guides" onclick="navigateTo('buying-guides'); return false;" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-brand-text hover:text-brand-orange hover:bg-brand-surface transition-colors">Buying Guides</a>
+                    <a href="#about" data-nav="about" onclick="navigateTo('about'); return false;" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-brand-text hover:text-brand-orange hover:bg-brand-surface transition-colors">About Me</a>
+                    <a href="#contact" data-nav="contact" onclick="navigateTo('contact'); return false;" class="nav-link px-3.5 py-2 rounded-lg text-sm font-medium text-brand-text hover:text-brand-orange hover:bg-brand-surface transition-colors">Contact</a>
+                </nav>
+
+                <!-- Right: Search Icon, Featured Products CTA & Mobile Menu Toggle -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <button type="button" onclick="toggleSearchModal(true)" class="p-2.5 rounded-xl text-brand-navy hover:bg-brand-surface hover:text-brand-orange transition-colors focus:outline-none focus:ring-2 focus:ring-brand-orange/40" aria-label="Search Products and Guides">
+                        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                    </button>
+
+                    <a href="#products" onclick="navigateTo('products'); return false;" class="hidden sm:inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navyLight text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition-all duration-200 hover:-translate-y-0.5">
+                        <span>Featured Products</span>
+                        <i class="fa-solid fa-arrow-right text-xs text-brand-orange"></i>
+                    </a>
+
+                    <!-- Mobile Hamburger Button -->
+                    <button type="button" id="mobile-menu-btn" onclick="toggleMobileDrawer(true)" class="lg:hidden p-2.5 rounded-xl text-brand-navy hover:bg-brand-surface transition-colors focus:outline-none" aria-label="Open Navigation Menu" aria-expanded="false">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide-Out Navigation Drawer -->
+    <div id="mobile-drawer-backdrop" onclick="toggleMobileDrawer(false)" class="fixed inset-0 bg-brand-navy/60 backdrop-blur-xs z-50 hidden opacity-0 transition-opacity duration-300"></div>
+    <aside id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between overflow-y-auto" aria-label="Mobile Navigation Drawer">
+        <div class="p-6">
+            <div class="flex items-center justify-between pb-6 border-b border-brand-border">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-lg bg-brand-navy flex items-center justify-center text-white font-heading font-bold text-base">LN</div>
+                    <span class="font-heading font-extrabold text-lg text-brand-navy">LOKESH NAIDU</span>
+                </div>
+                <button type="button" onclick="toggleMobileDrawer(false)" class="p-2 rounded-lg text-brand-muted hover:text-brand-navy hover:bg-brand-surface" aria-label="Close Menu">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <nav class="mt-6 flex flex-col gap-1.5">
+                <a href="#home" onclick="navigateTo('home'); toggleMobileDrawer(false); return false;" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium text-brand-text hover:bg-brand-surface hover:text-brand-orange transition-colors">
+                    <i class="fa-solid fa-house w-5 text-brand-muted"></i> Home
+                </a>
+                <a href="#categories" onclick="navigateTo('categories'); toggleMobileDrawer(false); return false;" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium text-brand-text hover:bg-brand-surface hover:text-brand-orange transition-colors">
+                    <i class="fa-solid fa-layer-group w-5 text-brand-muted"></i> Categories
+                </a>
+                <a href="#products" onclick="navigateTo('products'); toggleMobileDrawer(false); return false;" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium text-brand-text hover:bg-brand-surface hover:text-brand-orange transition-colors">
+                    <i class="fa-solid fa-box-open w-5 text-brand-muted"></i> Featured Products
+                </a>
+                <a href="#reviews" onclick="navigateTo('reviews'); toggleMobileDrawer(false); return false;" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium text-brand-text hover:bg-brand-surface hover:text-brand-orange transition-colors">
+                    <i class="fa-solid fa-clipboard-check w-5 text-brand-muted"></i> Product Reviews
+                </a>
+                <a href="#buying-guides" onclick="navigateTo('buying-guides'); toggleMobileDrawer(false); return false;" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium text-brand-text hover:bg-brand-surface hover:text-brand-orange transition-colors">
+                    <i class="fa-solid fa-book-open w-5 text-brand-muted"></i> Buying Guides
+                </a>
+                <a href="#about" onclick="navigateTo('about'); toggleMobileDrawer(false); return false;" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium text-brand-text hover:bg-brand-surface hover:text-brand-orange transition-colors">
+                    <i class="fa-solid fa-user w-5 text-brand-muted"></i> About Me
+                </a>
+                <a href="#contact" onclick="navigateTo('contact'); toggleMobileDrawer(false); return false;" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium text-brand-text hover:bg-brand-surface hover:text-brand-orange transition-colors">
+                    <i class="fa-solid fa-envelope w-5 text-brand-muted"></i> Contact
+                </a>
+            </nav>
+
+            <div class="mt-6 pt-6 border-t border-brand-border">
+                <button type="button" onclick="toggleMobileDrawer(false); toggleSearchModal(true)" class="w-full flex items-center justify-center gap-2 bg-brand-surface hover:bg-gray-200 text-brand-navy font-semibold py-3 px-4 rounded-xl transition-colors">
+                    <i class="fa-solid fa-magnifying-glass text-brand-orange"></i>
+                    <span>Search Recommendations</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="p-6 bg-brand-surface border-t border-brand-border">
+            <a href="https://www.facebook.com/lokesh.naidu.731" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full bg-[#1877F2] hover:bg-[#166FE5] text-white font-semibold py-2.5 px-4 rounded-xl text-sm transition-colors">
+                <i class="fa-brands fa-facebook text-base"></i>
+                <span>Follow on Facebook</span>
+            </a>
+            <p class="text-[11px] text-brand-muted text-center mt-3 leading-relaxed">
+                As an Amazon Associate, I earn from qualifying purchases.
+            </p>
+        </div>
+    </aside>
+
+    <!-- Global Quick Search Modal -->
+    <div id="search-modal" class="fixed inset-0 z-50 hidden items-start justify-center pt-16 sm:pt-24 px-4 bg-brand-navy/60 backdrop-blur-xs" role="dialog" aria-modal="true" aria-labelledby="search-modal-title">
+        <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-brand-border overflow-hidden animate-fade-up">
+            <div class="p-4 sm:p-5 border-b border-brand-border flex items-center gap-3">
+                <i class="fa-solid fa-magnifying-glass text-brand-orange text-lg"></i>
+                <input type="text" id="global-search-input" placeholder="Search products, categories (e.g., Laptops, Camping, Books)..." class="w-full text-base text-brand-text placeholder-brand-muted focus:outline-none" oninput="handleGlobalSearch(this.value)">
+                <button type="button" onclick="toggleSearchModal(false)" class="p-2 text-brand-muted hover:text-brand-navy rounded-lg" aria-label="Close Search">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div id="global-search-results" class="max-h-96 overflow-y-auto p-4 sm:p-5 bg-brand-surface/50">
+                <p class="text-xs font-semibold uppercase tracking-wider text-brand-muted mb-3">Quick Category Jumps</p>
+                <div class="flex flex-wrap gap-2" id="search-quick-tags"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN DYNAMIC CONTENT CONTAINER -->
+    <main id="app-root" class="flex-grow">
+        <!-- Rendered immediately on load by JavaScript -->
+    </main>
+
+    <!-- Multi-Column Premium Footer -->
+    <footer class="bg-brand-navy text-white pt-16 pb-10 mt-auto border-t border-white/10">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Column 1: Brand & Bio -->
+                <div class="lg:col-span-4 space-y-4">
+                    <a href="#home" onclick="navigateTo('home'); return false;" class="inline-flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-orange flex items-center justify-center text-brand-navy font-heading font-extrabold text-lg">
+                            LN
+                        </div>
+                        <span class="font-heading font-extrabold text-xl tracking-tight text-white">
+                            LOKESH NAIDU
+                        </span>
+                    </a>
+                    <p class="text-gray-300 text-sm leading-relaxed max-w-sm">
+                        Product recommendations and buying guides for everyday life. Curated by Lokesh Deenadayalan Naidu to help you make informed, practical shopping decisions.
+                    </p>
+                    <div class="pt-2">
+                        <a href="https://www.facebook.com/lokesh.naidu.731" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 bg-white/10 hover:bg-[#1877F2] text-white text-sm font-medium px-4 py-2.5 rounded-xl transition-colors duration-200">
+                            <i class="fa-brands fa-facebook text-base"></i>
+                            <span>Follow on Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Explore -->
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-brand-orange">Explore</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-300">
+                        <li><a href="#home" onclick="navigateTo('home'); return false;" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#categories" onclick="navigateTo('categories'); return false;" class="hover:text-white transition-colors">Categories</a></li>
+                        <li><a href="#products" onclick="navigateTo('products'); return false;" class="hover:text-white transition-colors">All Recommendations</a></li>
+                        <li><a href="#reviews" onclick="navigateTo('reviews'); return false;" class="hover:text-white transition-colors">Product Reviews</a></li>
+                        <li><a href="#buying-guides" onclick="navigateTo('buying-guides'); return false;" class="hover:text-white transition-colors">Buying Guides</a></li>
+                        <li><a href="#about" onclick="navigateTo('about'); return false;" class="hover:text-white transition-colors">About</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Categories -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-brand-orange">Categories</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-300">
+                        <li><a href="#category/sports" onclick="navigateTo('category', 'sports'); return false;" class="hover:text-white transition-colors">Sports</a></li>
+                        <li><a href="#category/household" onclick="navigateTo('category', 'household'); return false;" class="hover:text-white transition-colors">Household</a></li>
+                        <li><a href="#category/healthy-food" onclick="navigateTo('category', 'healthy-food'); return false;" class="hover:text-white transition-colors">Healthy Diet & Food</a></li>
+                        <li><a href="#category/books" onclick="navigateTo('category', 'books'); return false;" class="hover:text-white transition-colors">Books</a></li>
+                        <li><a href="#category/electronics" onclick="navigateTo('category', 'electronics'); return false;" class="hover:text-white transition-colors">Electronics</a></li>
+                        <li><a href="#category/clothing" onclick="navigateTo('category', 'clothing'); return false;" class="hover:text-white transition-colors">Clothing</a></li>
+                        <li><a href="#category/camping" onclick="navigateTo('category', 'camping'); return false;" class="hover:text-white transition-colors">Camping</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Legal & Support -->
+                <div class="lg:col-span-3 space-y-4">
+                    <h4 class="font-heading font-bold text-sm uppercase tracking-wider text-brand-orange">Legal</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-300">
+                        <li><a href="#affiliate-disclosure" onclick="navigateTo('affiliate-disclosure'); return false;" class="hover:text-white transition-colors">Affiliate Disclosure</a></li>
+                        <li><a href="#privacy-policy" onclick="navigateTo('privacy-policy'); return false;" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#terms" onclick="navigateTo('terms'); return false;" class="hover:text-white transition-colors">Terms and Conditions</a></li>
+                        <li><a href="#contact" onclick="navigateTo('contact'); return false;" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                    <div class="pt-2">
+                        <button type="button" onclick="openProjectBlueprintModal()" class="inline-flex items-center gap-2 text-xs text-gray-400 hover:text-brand-orange border border-white/15 px-3 py-1.5 rounded-lg transition-colors">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Affiliate Config & Route Map</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Affiliate Disclosure Notice in Footer -->
+            <div class="py-6 border-b border-white/10">
+                <div class="bg-white/5 rounded-xl p-4 text-xs text-gray-300 leading-relaxed flex items-start gap-3">
+                    <i class="fa-solid fa-shield-halved text-brand-orange text-base mt-0.5"></i>
+                    <p>
+                        <strong class="text-white">Amazon Associates Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases. Product recommendations, buying guides, and research-based overviews are curated independently. Sample listings are displayed until live Amazon Associates product links are configured.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+                <p>Copyright &copy; 2026 Lokesh Naidu. All rights reserved.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#affiliate-disclosure" onclick="navigateTo('affiliate-disclosure'); return false;" class="hover:text-white">Affiliate Disclosure</a>
+                    <span>&bull;</span>
+                    <a href="#privacy-policy" onclick="navigateTo('privacy-policy'); return false;" class="hover:text-white">Privacy Policy</a>
+                    <span>&bull;</span>
+                    <a href="#terms" onclick="navigateTo('terms'); return false;" class="hover:text-white">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 right-6 z-30 w-11 h-11 rounded-full bg-brand-navy hover:bg-brand-orange text-white shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:-translate-y-1 focus:outline-none" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom Affiliate Link / Toast Notification Modal -->
+    <div id="info-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-brand-navy/60 backdrop-blur-xs" role="dialog" aria-modal="true">
+        <div class="bg-white w-full max-w-md rounded-2xl shadow-2xl border border-brand-border p-6 animate-fade-up">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-2.5">
+                    <div id="info-modal-icon" class="w-10 h-10 rounded-xl bg-brand-orange/15 text-brand-orange flex items-center justify-center text-lg">
+                        <i class="fa-brands fa-amazon"></i>
+                    </div>
+                    <h3 id="info-modal-title" class="font-heading font-bold text-lg text-brand-navy">Amazon Affiliate Configuration</h3>
+                </div>
+                <button type="button" onclick="closeInfoModal()" class="text-brand-muted hover:text-brand-navy p-1.5 rounded-lg">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div id="info-modal-body" class="text-sm text-brand-text leading-relaxed space-y-3"></div>
+            <div class="mt-6 flex justify-end gap-3">
+                <button type="button" onclick="closeInfoModal()" class="px-5 py-2.5 rounded-xl bg-brand-navy hover:bg-brand-navyLight text-white text-sm font-semibold transition-colors">
+                    Got It
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Architecture & Multi-File Blueprint Modal -->
+    <div id="blueprint-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-brand-navy/70 backdrop-blur-xs" role="dialog" aria-modal="true">
+        <div class="bg-white w-full max-w-3xl max-h-[85vh] rounded-2xl shadow-2xl border border-brand-border flex flex-col overflow-hidden animate-fade-up">
+            <div class="p-5 sm:p-6 border-b border-brand-border flex items-center justify-between bg-brand-surface">
+                <div>
+                    <h3 class="font-heading font-bold text-lg text-brand-navy">Amazon Affiliate Configuration & Route Map</h3>
+                    <p class="text-xs text-brand-muted mt-0.5">Centralized data structure for Lokesh Deenadayalan Naidu</p>
+                </div>
+                <button type="button" onclick="closeProjectBlueprintModal()" class="p-2 rounded-lg text-brand-muted hover:text-brand-navy">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="p-5 sm:p-6 overflow-y-auto space-y-5 text-sm">
+                <div class="bg-brand-surface p-4 rounded-xl border border-brand-border">
+                    <h4 class="font-heading font-bold text-brand-navy mb-2">1. Centralized Affiliate Config (`affiliateConfig`)</h4>
+                    <p class="text-brand-muted text-xs mb-2">Update your Store ID and Marketplace once in the script block to activate all outbound Amazon Associate links:</p>
+                    <pre class="bg-brand-navy text-gray-100 p-3.5 rounded-lg text-xs overflow-x-auto"><code>const affiliateConfig = {
+    amazonStoreId: "YOUR_AMAZON_ASSOCIATE_ID",
+    marketplace: "YOUR_AMAZON_MARKETPLACE",
+    isConfigured: false
+};</code></pre>
+                </div>
+                <div class="bg-brand-surface p-4 rounded-xl border border-brand-border">
+                    <h4 class="font-heading font-bold text-brand-navy mb-2">2. Complete 13-Page Route Map</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-brand-text">
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#home</code> &rarr; Homepage</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#categories</code> &rarr; All 7 Categories</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#category/{slug}</code> &rarr; Individual Category View</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#products</code> &rarr; All Products + Search & Filters</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#product-details/{id}</code> &rarr; Product Research Overview</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#reviews</code> &rarr; Product Reviews / Overviews</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#buying-guides</code> &rarr; Editorial Buying Guides</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#article/{id}</code> &rarr; Full Buying Guide Reader</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#about</code> &rarr; About Lokesh Naidu</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#contact</code> &rarr; Contact Form</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#affiliate-disclosure</code> &rarr; Affiliate Disclosure</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#privacy-policy</code> &rarr; Privacy Policy</div>
+                        <div class="p-2 bg-white rounded border border-brand-border"><code>#terms</code> &rarr; Terms and Conditions</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- CENTRALIZED DATA & APPLICATION LOGIC (Vanilla JavaScript)              -->
+    <!-- ===================================================================== -->
+    <script>
+        /**
+         * 1. AMAZON ASSOCIATES CONFIGURATION
+         * Replace placeholder values with verified Amazon Associates credentials when ready.
+         */
+        const affiliateConfig = {
+            amazonStoreId: "YOUR_AMAZON_ASSOCIATE_ID",
+            marketplace: "YOUR_AMAZON_MARKETPLACE",
+            isConfigured: false
+        };
+
+        /**
+         * 2. OWNER PROFILE DATA
+         */
+        const ownerProfile = {
+            fullName: "Lokesh Deenadayalan Naidu",
+            brandName: "LOKESH NAIDU",
+            facebookUrl: "https://www.facebook.com/lokesh.naidu.731",
+            profileImage: "https://migweb.github.io/Lokesh-Naidu/lokesh.png",
+            fallbackAvatar: "https://placehold.co/600x720/232F3E/FF9900?text=Lokesh+Naidu"
+        };
+
+        /**
+         * 3. CENTRALIZED CATEGORIES DATA
+         */
+        const categoriesData = [
+            {
+                id: "sports",
+                name: "Sports",
+                shortName: "Sports",
+                icon: "fa-dumbbell",
+                description: "Sports equipment, fitness accessories, training equipment, and outdoor sports accessories for active routines.",
+                highlights: ["Sports equipment", "Fitness accessories", "Training equipment", "Outdoor sports accessories"],
+                image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/232F3E/FFFFFF?text=Sports+%26+Fitness"
+            },
+            {
+                id: "household",
+                name: "Household Items",
+                shortName: "Household",
+                icon: "fa-house-chimney",
+                description: "Kitchen essentials, home organization, cleaning accessories, home improvement products, and everyday household tools.",
+                highlights: ["Kitchen essentials", "Home organization", "Cleaning accessories", "Home improvement products", "Everyday household tools"],
+                image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/232F3E/FFFFFF?text=Household+Items"
+            },
+            {
+                id: "healthy-food",
+                name: "Healthy Diet & Food",
+                shortName: "Healthy Food",
+                icon: "fa-apple-whole",
+                description: "Wholesome food pantry staples, nutrition-related kitchen accessories, meal preparation tools, and balanced lifestyle essentials.",
+                highlights: ["Healthy food products", "Nutrition-related kitchen accessories", "Meal preparation tools", "Healthy lifestyle essentials"],
+                image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/232F3E/FFFFFF?text=Healthy+Diet+%26+Food"
+            },
+            {
+                id: "books",
+                name: "Books",
+                shortName: "Books",
+                icon: "fa-book-open",
+                description: "Personal development, technology books, educational reads, business books, and lifestyle & inspirational titles.",
+                highlights: ["Personal development", "Technology books", "Educational books", "Business books", "Lifestyle and inspirational books"],
+                image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/232F3E/FFFFFF?text=Books+%26+Reading"
+            },
+            {
+                id: "electronics",
+                name: "Electronics & Computers",
+                shortName: "Electronics",
+                icon: "fa-laptop",
+                description: "Laptops and computer accessories, keyboards and mice, monitors, headphones, storage devices, and smart gadgets.",
+                highlights: ["Laptops and computer accessories", "Keyboards and mice", "Monitors", "Headphones", "Storage devices", "Smart gadgets"],
+                image: "https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/232F3E/FFFFFF?text=Electronics+%26+Computers"
+            },
+            {
+                id: "clothing",
+                name: "Clothing",
+                shortName: "Clothing",
+                icon: "fa-shirt",
+                description: "Men's clothing, comfortable casual wear, functional sportswear, versatile shoes, and everyday fashion accessories.",
+                highlights: ["Men's clothing", "Casual wear", "Sportswear", "Shoes", "Fashion accessories"],
+                image: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/232F3E/FFFFFF?text=Clothing+%26+Apparel"
+            },
+            {
+                id: "camping",
+                name: "Camping & Outdoor",
+                shortName: "Camping",
+                icon: "fa-campground",
+                description: "Camping tents, durable backpacks, outdoor lighting, portable cooking equipment, travel accessories, and camping tools.",
+                highlights: ["Camping tents", "Backpacks", "Outdoor lighting", "Portable cooking equipment", "Travel accessories", "Camping tools"],
+                image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/232F3E/FFFFFF?text=Camping+%26+Outdoor"
+            }
+        ];
+
+        /**
+         * 4. CENTRALIZED SAMPLE PRODUCTS DATA
+         * Clearly marked as Sample / Demo Listings until live Amazon Associates links & verified pricing are configured.
+         */
+        const productsData = [
+            {
+                id: "prod-ergo-mech-keyboard",
+                name: "Sample Listing: Compact Wireless Mechanical Keyboard",
+                category: "electronics",
+                featured: true,
+                isDemo: true,
+                badge: "Sample Demo Product",
+                shortDescription: "Tactile low-profile wireless keyboard designed for clean desk setups, multi-device pairing, and comfortable daily typing.",
+                image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/F7F8FA/232F3E?text=Wireless+Keyboard+(Sample)",
+                amazonUrl: "",
+                overviewType: "Research-Based Product Overview",
+                introduction: "A compact 75% mechanical keyboard balances desk space efficiency with dedicated function and arrow keys, making it suitable for everyday productivity and writing.",
+                features: [
+                    "Multi-device Bluetooth and 2.4GHz wireless connectivity",
+                    "Compact footprint that keeps mouse movement ergonomic",
+                    "USB-C rechargeable battery with white backlighting",
+                    "Compatible across Windows, macOS, and tablet workflows"
+                ],
+                pros: [
+                    "Saves significant desk space compared to full-size keyboards",
+                    "Easy switching between laptop and desktop setups",
+                    "Tactile key feedback improves typing accuracy"
+                ],
+                cons: [
+                    "Lacks a dedicated numeric keypad for heavy spreadsheet entry",
+                    "Mechanical switches are louder than membrane laptop keys"
+                ],
+                whoShouldBuy: "Remote workers, writers, programmers, and students looking for an organized, ergonomic desk setup.",
+                whoMayNotNeed: "Users who rely heavily on a built-in 10-key number pad or prefer silent chiclet-style keys.",
+                editorialAssessment: "Based on specifications and common desk ergonomics, a compact wireless mechanical keyboard is one of the most practical upgrades for daily computer comfort."
+            },
+            {
+                id: "prod-portable-ssd-drive",
+                name: "Sample Listing: High-Speed USB-C Portable NVMe SSD",
+                category: "electronics",
+                featured: true,
+                isDemo: true,
+                badge: "Sample Demo Product",
+                shortDescription: "Pocket-sized solid-state external storage with shock-resistant aluminum housing for fast backups and media transfers.",
+                image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/F7F8FA/232F3E?text=Portable+SSD+(Sample)",
+                amazonUrl: "",
+                overviewType: "Research-Based Product Overview",
+                introduction: "External NVMe solid-state drives offer fast transfer speeds and durable solid-state reliability without fragile moving parts.",
+                features: [
+                    "USB 3.2 Gen 2 Type-C interface for rapid file transfers",
+                    "Compact, lightweight aluminum body for heat dissipation",
+                    "No moving mechanical parts for improved drop resistance",
+                    "Includes both USB-C to USB-C and USB-A adapter cables"
+                ],
+                pros: [
+                    "Fits easily in a pocket or laptop sleeve",
+                    "Significantly faster than traditional spinning hard drives",
+                    "Plug-and-play compatibility across modern laptops and phones"
+                ],
+                cons: [
+                    "Higher cost per gigabyte than bulk desktop hard drives",
+                    "Short included cables can sometimes dangle from desktop towers"
+                ],
+                whoShouldBuy: "Professionals, students, and travelers needing reliable, fast portable backups for documents, photos, and videos.",
+                whoMayNotNeed: "Users seeking multi-terabyte archival home storage on a tight budget.",
+                editorialAssessment: "Solid-state portable storage has become an everyday essential for safeguarding work files and expanding laptop capacity effortlessly."
+            },
+            {
+                id: "prod-glass-meal-prep",
+                name: "Sample Listing: Borosilicate Glass Meal Prep Containers (Set)",
+                category: "healthy-food",
+                featured: true,
+                isDemo: true,
+                badge: "Sample Demo Product",
+                shortDescription: "Airtight, leak-resistant glass food storage containers with snap-locking lids for organized weekly meal preparation.",
+                image: "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/F7F8FA/232F3E?text=Glass+Meal+Prep+(Sample)",
+                amazonUrl: "",
+                overviewType: "Research-Based Product Overview",
+                introduction: "Preparing balanced meals ahead of time becomes much simpler with durable glass containers that transition from refrigerator to microwave.",
+                features: [
+                    "Thermal-shock-resistant borosilicate glass bases",
+                    "Silicone-sealed snap lids to prevent spills in lunch bags",
+                    "Odor- and stain-resistant non-porous glass surface",
+                    "Stackable rectangular design for neat refrigerator storage"
+                ],
+                pros: [
+                    "Does not retain food odors or tomato sauce stains",
+                    "Safe for oven, microwave, freezer, and dishwasher use (bases)",
+                    "Clear visibility makes fridge organization effortless"
+                ],
+                cons: [
+                    "Heavier to carry in a backpack than plastic alternatives",
+                    "Requires careful handling to avoid drops on hard tile floors"
+                ],
+                whoShouldBuy: "Anyone planning weekly lunches, batch cooking wholesome ingredients, or organizing pantry and fridge leftovers.",
+                whoMayNotNeed: "Ultralight commuters who prioritize minimal bag weight above all else.",
+                editorialAssessment: "Switching to standardized glass food containers reduces kitchen clutter and supports consistent home meal preparation habits."
+            },
+            {
+                id: "prod-resistance-band-kit",
+                name: "Sample Listing: Multi-Level Resistance Bands & Mobility Kit",
+                category: "sports",
+                featured: true,
+                isDemo: true,
+                badge: "Sample Demo Product",
+                shortDescription: "Versatile fabric and latex resistance bands for warm-ups, strength conditioning, stretching, and home or travel workouts.",
+                image: "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/F7F8FA/232F3E?text=Resistance+Bands+(Sample)",
+                amazonUrl: "",
+                overviewType: "Research-Based Product Overview",
+                introduction: "Resistance bands provide progressive tension in a lightweight pouch, making them practical for home training, mobility routines, and travel.",
+                features: [
+                    "Multiple resistance levels clearly labeled for progressive training",
+                    "Compact carry pouch fits inside gym bags or suitcases",
+                    "Supports upper-body, lower-body, and joint mobility exercises",
+                    "Durable woven or layered construction for consistent tension"
+                ],
+                pros: [
+                    "Takes up virtually zero storage space at home",
+                    "Useful for both beginners and experienced athletes warming up",
+                    "Inexpensive compared to bulky home gym equipment"
+                ],
+                cons: [
+                    "Harder to track exact poundage compared to free weights",
+                    "Requires periodic inspection for wear over long-term use"
+                ],
+                whoShouldBuy: "Individuals building a compact home fitness routine, travelers, and athletes looking for reliable warm-up tools.",
+                whoMayNotNeed: "Lifters focused exclusively on heavy barbell powerlifting progression.",
+                editorialAssessment: "A well-made resistance band set is one of the highest-utility fitness accessories for staying active anywhere."
+            },
+            {
+                id: "prod-led-camping-lantern",
+                name: "Sample Listing: Rechargeable Collapsible LED Camping Lantern",
+                category: "camping",
+                featured: true,
+                isDemo: true,
+                badge: "Sample Demo Product",
+                shortDescription: "Weather-resistant, dimmable outdoor lantern with warm and cool light modes plus USB emergency power output.",
+                image: "https://images.unsplash.com/photo-1510312305653-8ed4962ae754?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/F7F8FA/232F3E?text=Camping+Lantern+(Sample)",
+                amazonUrl: "",
+                overviewType: "Research-Based Product Overview",
+                introduction: "Reliable, glare-free area lighting makes campsite setup, evening cooking, and tent organization safer and far more comfortable.",
+                features: [
+                    "Adjustable brightness levels with warm ambient light mode",
+                    "Integrated hanging hook for tent ceilings or tree branches",
+                    "USB-C rechargeable internal battery with charge indicator",
+                    "IPX4 splash-resistant housing for unpredictable outdoor weather"
+                ],
+                pros: [
+                    "360-degree illumination lights an entire campsite table",
+                    "Eliminates the need to carry disposable alkaline batteries",
+                    "Doubles as a reliable home emergency light during power outages"
+                ],
+                cons: [
+                    "Less directional than a headlamp when hiking trails at night",
+                    "Must be remembered to recharge before multi-day trips"
+                ],
+                whoShouldBuy: "Weekend campers, road trippers, and homeowners preparing an emergency preparedness kit.",
+                whoMayNotNeed: "Ultralight solo backpackers who only carry a minimalist headlamp.",
+                editorialAssessment: "A rechargeable lantern bridges the gap between outdoor adventure gear and practical household emergency preparedness."
+            },
+            {
+                id: "prod-pantry-organizer-bins",
+                name: "Sample Listing: Modular Stackable Pantry & Cabinet Organizers",
+                category: "household",
+                featured: true,
+                isDemo: true,
+                badge: "Sample Demo Product",
+                shortDescription: "Clear BPA-free storage bins with integrated handles to group dry goods, spices, and household supplies neatly.",
+                image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/F7F8FA/232F3E?text=Pantry+Organizers+(Sample)",
+                amazonUrl: "",
+                overviewType: "Research-Based Product Overview",
+                introduction: "Deep pantry shelves and under-sink cabinets often hide items in the back. Pull-out modular bins create instant visibility and order.",
+                features: [
+                    "Crystal-clear walls to identify contents at a glance",
+                    "Built-in front and side handles for easy sliding off high shelves",
+                    "Modular widths designed to maximize standard cabinet depths",
+                    "Smooth, easy-to-wipe surfaces"
+                ],
+                pros: [
+                    "Prevents duplicate grocery purchases by keeping inventory visible",
+                    "Works equally well in kitchens, bathrooms, and home offices",
+                    "Simple to rearrange as household needs evolve"
+                ],
+                cons: [
+                    "Requires measuring shelf height and depth before ordering",
+                    "Hand-wash recommended to maintain clarity"
+                ],
+                whoShouldBuy: "Homeowners and renters looking to declutter kitchen pantries, refrigerators, or utility closets.",
+                whoMayNotNeed: "Spaces that already feature custom pull-out drawer cabinetry.",
+                editorialAssessment: "Modular clear bins turn chaotic deep shelves into structured, easy-to-reach storage zones."
+            },
+            {
+                id: "prod-systems-thinking-book",
+                name: "Sample Listing: Practical Habits & Decision-Making Hardcover",
+                category: "books",
+                featured: false,
+                isDemo: true,
+                badge: "Sample Demo Product",
+                shortDescription: "An actionable, clearly structured guide to building better daily routines, clear thinking, and steady personal growth.",
+                image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/F7F8FA/232F3E?text=Personal+Development+Book+(Sample)",
+                amazonUrl: "",
+                overviewType: "Research-Based Book Overview",
+                introduction: "Well-written non-fiction books on decision-making and habit formation offer timeless frameworks for work and everyday life.",
+                features: [
+                    "Structured into concise, practical chapters with real-world examples",
+                    "Focuses on repeatable systems rather than short-term motivation",
+                    "Available in hardcover, paperback, audiobook, and e-reader formats",
+                    "Ideal reference book to revisit throughout the year"
+                ],
+                pros: [
+                    "Easy to read in 15-minute daily sessions",
+                    "Actionable takeaways applicable to work, health, and learning",
+                    "Makes a thoughtful gift for students and professionals"
+                ],
+                cons: [
+                    "Requires consistent personal application to see real results",
+                    "Readers familiar with behavioral psychology may recognize core concepts"
+                ],
+                whoShouldBuy: "Lifelong learners, professionals, and readers interested in productivity, clarity, and personal development.",
+                whoMayNotNeed: "Readers looking strictly for fiction or purely technical coding manuals.",
+                editorialAssessment: "Books that simplify complex behavioral habits into everyday steps remain among the best investments for personal growth."
+            },
+            {
+                id: "prod-everyday-performance-polo",
+                name: "Sample Listing: Breathable Stretch Everyday Polo & Casual Tee",
+                category: "clothing",
+                featured: false,
+                isDemo: true,
+                badge: "Sample Demo Product",
+                shortDescription: "Lightweight, moisture-wicking everyday knit top engineered for clean casual style and all-day comfort.",
+                image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/F7F8FA/232F3E?text=Casual+Wear+(Sample)",
+                amazonUrl: "",
+                overviewType: "Research-Based Apparel Overview",
+                introduction: "Versatile everyday clothing blends breathable fabric technology with a tailored silhouette suitable for casual outings or smart-casual workdays.",
+                features: [
+                    "Soft cotton-blend or technical stretch weave for airflow",
+                    "Wrinkle-resistant construction ideal for travel and daily wear",
+                    "Reinforced collar and seams to maintain shape after washing",
+                    "Available in versatile neutral tones that pair easily"
+                ],
+                pros: [
+                    "Bridges the gap between athletic comfort and neat casual style",
+                    "Low-maintenance care with minimal ironing needed",
+                    "Comfortable across warm and mild climates"
+                ],
+                cons: [
+                    "Sizing can vary slightly between athletic and relaxed fits",
+                    "Synthetic blends feel different from 100% heavyweight cotton"
+                ],
+                whoShouldBuy: "Men seeking versatile, comfortable wardrobe staples for daily wear, travel, and casual meetings.",
+                whoMayNotNeed: "Those who strictly prefer formal dress shirts or heavyweight cotton tees.",
+                editorialAssessment: "Investing in a few well-fitting, breathable neutral tops simplifies daily dressing while keeping comfort high."
+            },
+            {
+                id: "prod-27inch-ips-monitor",
+                name: "Sample Listing: 27-Inch IPS Ergonomic Workspace Monitor",
+                category: "electronics",
+                featured: false,
+                isDemo: true,
+                badge: "Sample Demo Product",
+                shortDescription: "Crisp IPS display with height-adjustable stand, slim bezels, and eye-comfort flicker-free technology for home offices.",
+                image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/F7F8FA/232F3E?text=27-Inch+Monitor+(Sample)",
+                amazonUrl: "",
+                overviewType: "Research-Based Product Overview",
+                introduction: "Upgrading from a small laptop screen to a 27-inch IPS monitor dramatically improves posture, multitasking, and reading clarity.",
+                features: [
+                    "Wide viewing angle IPS panel with accurate color reproduction",
+                    "Height, tilt, and swivel ergonomic stand adjustments",
+                    "Low blue light mode and flicker-free backlighting",
+                    "HDMI, DisplayPort, and VESA mount compatibility"
+                ],
+                pros: [
+                    "Comfortable side-by-side document and browser multitasking",
+                    "Ergonomic stand helps keep screen at natural eye level",
+                    "Clean three-sided thin bezel design"
+                ],
+                cons: [
+                    "Requires at least 24 inches of desk depth for ideal viewing distance",
+                    "Built-in monitor speakers are typically basic"
+                ],
+                whoShouldBuy: "Home office workers, students, and content creators spending several hours daily at a desk.",
+                whoMayNotNeed: "Users who work exclusively from cafes or require a portable travel screen.",
+                editorialAssessment: "An adjustable 27-inch IPS monitor is the centerpiece of a productive, posture-friendly workstation."
+            },
+            {
+                id: "prod-daypack-30l",
+                name: "Sample Listing: 30L Weather-Resistant Trail & Travel Daypack",
+                category: "camping",
+                featured: false,
+                isDemo: true,
+                badge: "Sample Demo Product",
+                shortDescription: "Lightweight, ergonomic daypack with ventilated back panel, hydration sleeve, and ripstop nylon shell for day hikes and travel.",
+                image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80",
+                fallback: "https://placehold.co/800x600/F7F8FA/232F3E?text=Travel+Daypack+(Sample)",
+                amazonUrl: "",
+                overviewType: "Research-Based Product Overview",
+                introduction: "A 30-liter daypack hits the sweet spot between carrying enough layers, water, and gear for a full day outdoors while remaining compact enough for airline carry-on use.",
+                features: [
+                    "Durable water-repellent ripstop exterior fabric",
+                    "Padded shoulder straps with adjustable sternum and waist belts",
+                    "Side stretch water bottle pockets and external trekking pole loops",
+                    "Internal sleeve compatible with hydration bladders or a laptop"
+                ],
+                pros: [
+                    "Versatile enough for weekend hikes, commuting, and flight carry-on",
+                    "Breathable mesh back panel reduces heat buildup",
+                    "Well-organized zippered compartments for small tools"
+                ],
+                cons: [
+                    "Not large enough for multi-day winter backpacking with a tent",
+                    "Minimalist hip belt compared to heavy expedition packs"
+                ],
+                whoShouldBuy: "Day hikers, weekend travelers, and outdoor enthusiasts wanting one reliable pack for multiple activities.",
+                whoMayNotNeed: "Backcountry campers carrying multi-day cold-weather expedition loads.",
+                editorialAssessment: "A well-balanced 30L backpack serves double duty on mountain trails and everyday travel."
+            }
+        ];
+
+        /**
+         * 5. EDITORIAL BUYING GUIDES DATA
+         */
+        const buyingGuidesData = [
+            {
+                id: "guide-computer-accessories",
+                title: "Best Computer Accessories for Everyday Work",
+                category: "electronics",
+                readTime: "6 min read",
+                date: "2026 Editorial Guide",
+                excerpt: "From ergonomic keyboards and precision mice to portable NVMe storage and external monitors—practical upgrades that improve daily focus and desk comfort.",
+                image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1000&q=80",
+                fallback: "https://placehold.co/1000x600/232F3E/FFFFFF?text=Computer+Accessories+Guide",
+                sections: [
+                    {
+                        heading: "1. Prioritize Ergonomics Before Aesthetics",
+                        body: "Spending hours at a computer puts subtle strain on your wrists, neck, and eyes. Starting with an external keyboard, a comfortable mouse, and raising your monitor to eye level creates immediate everyday comfort."
+                    },
+                    {
+                        heading: "2. Reliable Storage & Cable Organization",
+                        body: "A pocket-sized USB-C SSD ensures critical work files are backed up in seconds, while simple under-desk cable trays and magnetic clips eliminate visual clutter."
+                    },
+                    {
+                        heading: "3. Choosing Accessories That Last",
+                        body: "Look for standard USB-C connectivity, multi-device wireless pairing, and solid build materials rather than proprietary connectors that become obsolete quickly."
+                    }
+                ],
+                recommendedProductIds: ["prod-ergo-mech-keyboard", "prod-portable-ssd-drive", "prod-27inch-ips-monitor"]
+            },
+            {
+                id: "guide-camping-beginners",
+                title: "Essential Camping Equipment for Beginners",
+                category: "camping",
+                readTime: "7 min read",
+                date: "2026 Editorial Guide",
+                excerpt: "Planning your first overnight outdoor trip? Focus on reliable shelter, layered lighting, a versatile daypack, and compact cooking gear without overpacking.",
+                image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=1000&q=80",
+                fallback: "https://placehold.co/1000x600/232F3E/FFFFFF?text=Camping+Equipment+Guide",
+                sections: [
+                    {
+                        heading: "1. Start With Weather-Ready Shelter & Sleep",
+                        body: "A freestanding tent with a full-coverage rainfly and simple color-coded poles saves frustration when setting up camp before sunset. Pair it with an insulated sleeping pad for ground warmth."
+                    },
+                    {
+                        heading: "2. Two-Tier Lighting System",
+                        body: "Combine a hands-free headlamp for walking trails with a collapsible rechargeable LED lantern for ambient lighting around your camp table and inside your tent."
+                    },
+                    {
+                        heading: "3. Pack Smart With a 30L Daypack",
+                        body: "Even when car camping, a dedicated 30L trail backpack keeps water, snacks, a first-aid pouch, and a rain shell organized for daytime hikes."
+                    }
+                ],
+                recommendedProductIds: ["prod-led-camping-lantern", "prod-daypack-30l"]
+            },
+            {
+                id: "guide-household-products",
+                title: "Household Products Worth Considering",
+                category: "household",
+                readTime: "5 min read",
+                date: "2026 Editorial Guide",
+                excerpt: "Simple, durable home organization tools, kitchen essentials, and everyday maintenance items that save time and keep living spaces tidy.",
+                image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80",
+                fallback: "https://placehold.co/1000x600/232F3E/FFFFFF?text=Household+Products+Guide",
+                sections: [
+                    {
+                        heading: "1. Visibility Reduces Clutter",
+                        body: "Clear, modular pantry and cabinet bins allow you to see exactly what you have on hand, preventing forgotten items in the back of deep shelves."
+                    },
+                    {
+                        heading: "2. Multi-Purpose Everyday Tools",
+                        body: "Instead of single-use gadgets, prioritize well-built kitchen basics, microfiber cleaning kits, and compact cordless tools that handle multiple household tasks."
+                    }
+                ],
+                recommendedProductIds: ["prod-pantry-organizer-bins", "prod-glass-meal-prep"]
+            },
+            {
+                id: "guide-sports-accessories",
+                title: "Practical Sports Accessories",
+                category: "sports",
+                readTime: "5 min read",
+                date: "2026 Editorial Guide",
+                excerpt: "Compact, high-utility fitness and training gear that supports consistency whether you train at home, outdoors, or while traveling.",
+                image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=80",
+                fallback: "https://placehold.co/1000x600/232F3E/FFFFFF?text=Sports+Accessories+Guide",
+                sections: [
+                    {
+                        heading: "1. Consistency Beats Complexity",
+                        body: "The most effective training accessories are the ones you actually use regularly. Portable resistance bands, jump ropes, and supportive mats remove friction from starting a workout."
+                    },
+                    {
+                        heading: "2. Warm-Up & Recovery Essentials",
+                        body: "Adding 10 minutes of band-assisted mobility work before and after training helps keep joints moving smoothly."
+                    }
+                ],
+                recommendedProductIds: ["prod-resistance-band-kit"]
+            },
+            {
+                id: "guide-books-exploring",
+                title: "Books Worth Exploring",
+                category: "books",
+                readTime: "4 min read",
+                date: "2026 Editorial Guide",
+                excerpt: "Thought-provoking titles across personal development, technology, business, and practical everyday learning.",
+                image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1000&q=80",
+                fallback: "https://placehold.co/1000x600/232F3E/FFFFFF?text=Books+Worth+Exploring",
+                sections: [
+                    {
+                        heading: "1. Building a Balanced Reading List",
+                        body: "Mixing foundational books on clear thinking and habits with technical or industry-specific reads keeps learning both practical and inspiring."
+                    },
+                    {
+                        heading: "2. Print vs. Digital Formats",
+                        body: "Print editions shine for note-taking and revisiting highlighted frameworks, while digital editions make reading accessible during commutes."
+                    }
+                ],
+                recommendedProductIds: ["prod-systems-thinking-book"]
+            },
+            {
+                id: "guide-clothing-essentials",
+                title: "Everyday Clothing Essentials",
+                category: "clothing",
+                readTime: "5 min read",
+                date: "2026 Editorial Guide",
+                excerpt: "How to choose breathable fabrics, versatile neutral colors, and durable casual staples that work across seasons.",
+                image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80",
+                fallback: "https://placehold.co/1000x600/232F3E/FFFFFF?text=Clothing+Essentials+Guide",
+                sections: [
+                    {
+                        heading: "1. Focus on Fabric & Fit",
+                        body: "Breathable cotton-stretch weaves and moisture-wicking knits keep you comfortable throughout busy days while maintaining a crisp, clean drape."
+                    },
+                    {
+                        heading: "2. Versatile Neutral Palette",
+                        body: "Navy, charcoal, olive, white, and earth tones mix and match effortlessly, reducing decision fatigue every morning."
+                    }
+                ],
+                recommendedProductIds: ["prod-everyday-performance-polo"]
+            },
+            {
+                id: "guide-healthy-kitchen-tools",
+                title: "Healthy Kitchen and Meal Preparation Tools",
+                category: "healthy-food",
+                readTime: "6 min read",
+                date: "2026 Editorial Guide",
+                excerpt: "Practical food storage, portioning, and prep accessories that make home cooking simpler and more enjoyable.",
+                image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=80",
+                fallback: "https://placehold.co/1000x600/232F3E/FFFFFF?text=Healthy+Kitchen+Guide",
+                sections: [
+                    {
+                        heading: "1. Prep Once, Eat Well All Week",
+                        body: "Washing and chopping whole ingredients ahead of time—and storing them in clear airtight glass containers—makes assembling nutritious meals effortless on busy weekdays."
+                    },
+                    {
+                        heading: "2. Safe, Easy-to-Clean Materials",
+                        body: "Borosilicate glass, stainless steel, and wooden prep boards resist odors and clean up quickly after cooking."
+                    }
+                ],
+                recommendedProductIds: ["prod-glass-meal-prep", "prod-pantry-organizer-bins"]
+            }
+        ];
+
+        /**
+         * 6. APPLICATION STATE
+         */
+        const appState = {
+            currentRoute: 'home',
+            routeParam: null,
+            searchQuery: '',
+            selectedCategory: 'all',
+            sortBy: 'featured'
+        };
+
+        /**
+         * 7. HELPER UTILITIES
+         */
+        function getCategoryById(catId) {
+            return categoriesData.find(c => c.id === catId) || {
+                id: catId,
+                name: catId,
+                shortName: catId,
+                icon: 'fa-tag',
+                description: '',
+                highlights: [],
+                image: '',
+                fallback: ''
+            };
+        }
+
+        function getProductById(prodId) {
+            return productsData.find(p => p.id === prodId) || productsData[0];
+        }
+
+        function getGuideById(guideId) {
+            return buyingGuidesData.find(g => g.id === guideId) || buyingGuidesData[0];
+        }
+
+        function buildAmazonOutboundUrl(product) {
+            if (affiliateConfig.isConfigured && product.amazonUrl) {
+                const separator = product.amazonUrl.includes('?') ? '&' : '?';
+                return `${product.amazonUrl}${separator}tag=${encodeURIComponent(affiliateConfig.amazonStoreId)}`;
+            }
+            return `https://www.amazon.com/s?k=${encodeURIComponent(product.name.replace('Sample Listing: ', ''))}`;
+        }
+
+        function handleAffiliateButtonClick(event, productId) {
+            const product = getProductById(productId);
+            if (!affiliateConfig.isConfigured || !product.amazonUrl) {
+                event.preventDefault();
+                showInfoModal(
+                    "Sample Product Listing (Demo Mode)",
+                    `<p><strong>${product.name}</strong> is currently displayed as a sample recommendation.</p>
+                     <p class="text-xs text-brand-muted bg-brand-surface p-3 rounded-xl border border-brand-border">
+                        <strong>Affiliate Compliance Notice:</strong> No fake Amazon affiliate links, prices, or fabricated ratings are used. Once <code>affiliateConfig.amazonStoreId</code> and verified Amazon product URLs are configured, this button will open the direct Amazon product page with <code>rel="nofollow sponsored noopener"</code>.
+                     </p>`
+                );
+            }
+        }
+
+        function showInfoModal(title, htmlBody) {
+            const modal = document.getElementById('info-modal');
+            document.getElementById('info-modal-title').textContent = title;
+            document.getElementById('info-modal-body').innerHTML = htmlBody;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeInfoModal() {
+            const modal = document.getElementById('info-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function openProjectBlueprintModal() {
+            const modal = document.getElementById('blueprint-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeProjectBlueprintModal() {
+            const modal = document.getElementById('blueprint-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        /**
+         * 8. REUSABLE UI COMPONENT RENDERERS
+         */
+        function renderProductCard(product) {
+            const category = getCategoryById(product.category);
+            const outboundUrl = buildAmazonOutboundUrl(product);
+
+            return `
+                <article class="group bg-white rounded-2xl border border-brand-border shadow-soft hover:shadow-card transition-all duration-300 flex flex-col overflow-hidden">
+                    <!-- Product Image Container -->
+                    <div class="relative aspect-[4/3] bg-brand-surface overflow-hidden">
+                        <img src="${product.image}" 
+                             alt="${product.name}" 
+                             loading="lazy"
+                             onerror="this.onerror=null;this.src='${product.fallback}';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        
+                        <!-- Category Badge -->
+                        <span class="absolute top-3 left-3 bg-brand-navy/90 backdrop-blur-xs text-white text-xs font-semibold px-3 py-1 rounded-full">
+                            ${category.shortName}
+                        </span>
+
+                        <!-- Transparent Sample Demo Label -->
+                        <span class="absolute top-3 right-3 bg-white/95 text-brand-navy border border-brand-border text-[11px] font-semibold px-2.5 py-1 rounded-full shadow-xs">
+                            Sample Listing
+                        </span>
+                    </div>
+
+                    <!-- Card Content -->
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                        <div class="text-xs font-medium text-brand-muted mb-1.5 flex items-center gap-1.5">
+                            <i class="fa-solid ${category.icon} text-brand-orange"></i>
+                            <span>${category.name}</span>
+                        </div>
+
+                        <h3 class="font-heading font-bold text-lg text-brand-navy group-hover:text-brand-orange transition-colors line-clamp-2 mb-2.5">
+                            <a href="#product-details/${product.id}" onclick="navigateTo('product-details', '${product.id}'); return false;">
+                                ${product.name}
+                            </a>
+                        </h3>
+
+                        <p class="text-sm text-brand-muted leading-relaxed line-clamp-3 mb-4 flex-grow">
+                            ${product.shortDescription}
+                        </p>
+
+                        <!-- Honest Status Indicator (No fabricated prices or ratings) -->
+                        <div class="pt-3 pb-4 border-t border-brand-border/70 flex items-center justify-between text-xs text-brand-muted">
+                            <span class="inline-flex items-center gap-1.5">
+                                <i class="fa-solid fa-file-lines text-brand-navy"></i>
+                                <span>Research Overview</span>
+                            </span>
+                            <span class="text-brand-navy font-medium">Check Amazon for current price</span>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-auto">
+                            <a href="#product-details/${product.id}" 
+                               onclick="navigateTo('product-details', '${product.id}'); return false;"
+                               class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-brand-border hover:border-brand-navy text-brand-navy text-xs sm:text-sm font-semibold transition-colors">
+                                <span>Overview</span>
+                            </a>
+                            <a href="${outboundUrl}" 
+                               target="_blank" 
+                               rel="nofollow sponsored noopener"
+                               onclick="handleAffiliateButtonClick(event, '${product.id}')"
+                               class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-brand-navy text-xs sm:text-sm font-bold shadow-xs transition-all duration-200 hover:-translate-y-0.5">
+                                <span>View on Amazon</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            `;
+        }
+
+        function renderCategoryCard(category) {
+            return `
+                <article class="group bg-white rounded-2xl border border-brand-border shadow-soft hover:shadow-card transition-all duration-300 overflow-hidden flex flex-col">
+                    <div class="relative h-48 sm:h-52 overflow-hidden bg-brand-surface">
+                        <img src="${category.image}" 
+                             alt="${category.name} Category" 
+                             loading="lazy"
+                             onerror="this.onerror=null;this.src='${category.fallback}';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/70 via-brand-navy/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                            <span class="inline-flex items-center gap-2 bg-white/95 text-brand-navy text-xs font-bold px-3 py-1.5 rounded-xl shadow-xs">
+                                <i class="fa-solid ${category.icon} text-brand-orange"></i>
+                                <span>${category.name}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="font-heading font-bold text-xl text-brand-navy mb-2 group-hover:text-brand-orange transition-colors">
+                            ${category.name}
+                        </h3>
+                        <p class="text-sm text-brand-muted leading-relaxed mb-4 flex-grow">
+                            ${category.description}
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            ${category.highlights.slice(0, 3).map(h => `
+                                <span class="text-[11px] bg-brand-surface text-brand-text px-2.5 py-1 rounded-md border border-brand-border/60">${h}</span>
+                            `).join('')}
+                        </div>
+                        <a href="#category/${category.id}" 
+                           onclick="navigateTo('category', '${category.id}'); return false;"
+                           class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-brand-surface group-hover:bg-brand-navy text-brand-navy group-hover:text-white font-semibold text-sm transition-colors duration-200">
+                            <span>Explore Category</span>
+                            <i class="fa-solid fa-arrow-right text-xs text-brand-orange"></i>
+                        </a>
+                    </div>
+                </article>
+            `;
+        }
+
+        function renderGuideCard(guide) {
+            const category = getCategoryById(guide.category);
+            return `
+                <article class="group bg-white rounded-2xl border border-brand-border shadow-soft hover:shadow-card transition-all duration-300 overflow-hidden flex flex-col">
+                    <div class="relative aspect-[16/10] overflow-hidden bg-brand-surface">
+                        <img src="${guide.image}" 
+                             alt="${guide.title}" 
+                             loading="lazy"
+                             onerror="this.onerror=null;this.src='${guide.fallback}';"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-brand-orange text-brand-navy text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                            ${category.shortName}
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center gap-3 text-xs text-brand-muted mb-2.5">
+                            <span><i class="fa-regular fa-clock mr-1 text-brand-orange"></i>${guide.readTime}</span>
+                            <span>&bull;</span>
+                            <span>${guide.date}</span>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-navy group-hover:text-brand-orange transition-colors mb-3 line-clamp-2">
+                            <a href="#article/${guide.id}" onclick="navigateTo('article', '${guide.id}'); return false;">
+                                ${guide.title}
+                            </a>
+                        </h3>
+                        <p class="text-sm text-brand-muted leading-relaxed mb-5 flex-grow line-clamp-3">
+                            ${guide.excerpt}
+                        </p>
+                        <a href="#article/${guide.id}" 
+                           onclick="navigateTo('article', '${guide.id}'); return false;"
+                           class="inline-flex items-center gap-2 text-sm font-bold text-brand-navy group-hover:text-brand-orange transition-colors mt-auto">
+                            <span>Read More</span>
+                            <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </article>
+            `;
+        }
+
+        /**
+         * 9. PAGE VIEWS (All 13 Required Pages)
+         */
+
+        // VIEW 1: HOMEPAGE (index.html)
+        function renderHomeView() {
+            const featuredProducts = productsData.filter(p => p.featured).slice(0, 6);
+            const featuredGuides = buyingGuidesData.slice(0, 3);
+
+            return `
+                <!-- HERO SECTION -->
+                <section class="relative overflow-hidden bg-gradient-to-b from-brand-surface via-white to-white pt-10 pb-16 sm:pt-14 sm:pb-24 border-b border-brand-border/60">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+                            
+                            <!-- LEFT SIDE -->
+                            <div class="lg:col-span-7 space-y-6 animate-fade-up">
+                                <div class="inline-flex items-center gap-2 bg-brand-orange/12 border border-brand-orange/30 text-brand-navy px-3.5 py-1.5 rounded-full">
+                                    <span class="w-2 h-2 rounded-full bg-brand-orange"></span>
+                                    <span class="text-xs font-bold tracking-wider uppercase">PRODUCT RECOMMENDATIONS & BUYING GUIDES</span>
+                                </div>
+
+                                <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-brand-navy tracking-tight leading-[1.12]">
+                                    Discover Products <br class="hidden sm:inline" />
+                                    <span class="text-brand-orange">Worth Your Money.</span>
+                                </h1>
+
+                                <p class="text-base sm:text-lg text-brand-muted leading-relaxed max-w-2xl">
+                                    From everyday essentials to the latest technology, discover carefully selected products, useful reviews, and practical buying recommendations to help you make smarter shopping decisions.
+                                </p>
+
+                                <!-- CTA Buttons -->
+                                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+                                    <a href="#products" onclick="navigateTo('products'); return false;" class="inline-flex items-center justify-center gap-2.5 bg-brand-orange hover:bg-brand-orangeHover text-brand-navy font-bold text-base px-7 py-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5">
+                                        <span>Explore Products</span>
+                                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                                    </a>
+                                    <a href="#categories" onclick="navigateTo('categories'); return false;" class="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-brand-surface text-brand-navy border-2 border-brand-navy/15 hover:border-brand-navy font-bold text-base px-7 py-4 rounded-xl transition-all duration-200">
+                                        <span>Browse Categories</span>
+                                    </a>
+                                </div>
+
+                                <!-- Trust Indicators -->
+                                <div class="pt-6 border-t border-brand-border grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-orange flex items-center justify-center shrink-0">
+                                            <i class="fa-solid fa-check-circle"></i>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-semibold text-brand-navy">Curated Product Recommendations</span>
+                                    </div>
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-orange flex items-center justify-center shrink-0">
+                                            <i class="fa-solid fa-compass"></i>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-semibold text-brand-navy">Practical Buying Guides</span>
+                                    </div>
+                                    <div class="flex items-center gap-2.5">
+                                        <div class="w-8 h-8 rounded-lg bg-brand-navy/5 text-brand-orange flex items-center justify-center shrink-0">
+                                            <i class="fa-solid fa-layer-group"></i>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-semibold text-brand-navy">Multiple Product Categories</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- RIGHT SIDE: Profile Photo of Lokesh Deenadayalan Naidu -->
+                            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                                <div class="relative w-full max-w-md">
+                                    <!-- Modern Decorative Background Shapes -->
+                                    <div class="absolute -inset-4 bg-gradient-to-tr from-brand-navy/10 via-brand-orange/15 to-transparent rounded-[2rem] transform rotate-2"></div>
+                                    <div class="absolute -bottom-5 -left-5 w-32 h-32 bg-brand-orange/20 rounded-full blur-2xl"></div>
+
+                                    <!-- Main Rounded Image Container -->
+                                    <div class="relative bg-white p-3 rounded-[2rem] shadow-float border border-brand-border">
+                                        <div class="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-brand-surface">
+                                            <img src="${ownerProfile.profileImage}" 
+                                                 alt="Lokesh Deenadayalan Naidu" 
+                                                 onerror="this.onerror=null;this.src='${ownerProfile.fallbackAvatar}';"
+                                                 class="w-full h-full object-cover object-top">
+                                            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/40 to-transparent p-5 text-white">
+                                                <p class="font-heading font-bold text-lg leading-tight">${ownerProfile.fullName}</p>
+                                                <p class="text-xs text-gray-200 mt-0.5">Curated Everyday & Tech Recommendations</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Floating Product Category Labels -->
+                                    <button type="button" onclick="navigateTo('category', 'electronics')" class="hidden sm:flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl shadow-float border border-brand-border absolute -left-8 top-10 animate-float-slow hover:border-brand-orange transition-colors">
+                                        <span class="w-7 h-7 rounded-lg bg-brand-orange/15 text-brand-orange flex items-center justify-center text-xs">
+                                            <i class="fa-solid fa-laptop"></i>
+                                        </span>
+                                        <span class="text-xs font-bold text-brand-navy">Tech & Electronics</span>
+                                    </button>
+
+                                    <button type="button" onclick="navigateTo('category', 'camping')" class="hidden sm:flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl shadow-float border border-brand-border absolute -right-5 top-1/2 animate-float-delayed hover:border-brand-orange transition-colors">
+                                        <span class="w-7 h-7 rounded-lg bg-brand-navy/10 text-brand-navy flex items-center justify-center text-xs">
+                                            <i class="fa-solid fa-campground"></i>
+                                        </span>
+                                        <span class="text-xs font-bold text-brand-navy">Camping & Outdoor</span>
+                                    </button>
+
+                                    <button type="button" onclick="navigateTo('category', 'household')" class="hidden sm:flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl shadow-float border border-brand-border absolute -left-4 bottom-24 animate-float-delayed hover:border-brand-orange transition-colors">
+                                        <span class="w-7 h-7 rounded-lg bg-brand-orange/15 text-brand-orange flex items-center justify-center text-xs">
+                                            <i class="fa-solid fa-house-chimney"></i>
+                                        </span>
+                                        <span class="text-xs font-bold text-brand-navy">Home Essentials</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PRODUCT CATEGORIES SECTION -->
+                <section id="categories-section" class="py-16 sm:py-24 bg-white">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 reveal-on-scroll">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Curated Collections</span>
+                                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy mt-1">
+                                    Explore My Favorite Categories
+                                </h2>
+                                <p class="text-brand-muted text-base mt-2 max-w-2xl">
+                                    Discover recommendations across different interests and everyday essentials.
+                                </p>
+                            </div>
+                            <a href="#categories" onclick="navigateTo('categories'); return false;" class="inline-flex items-center gap-2 text-sm font-bold text-brand-navy hover:text-brand-orange transition-colors">
+                                <span>View All 7 Categories</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 reveal-on-scroll">
+                            ${categoriesData.map(cat => renderCategoryCard(cat)).join('')}
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FEATURED PRODUCTS SECTION -->
+                <section id="featured-products-section" class="py-16 sm:py-24 bg-brand-surface border-y border-brand-border/70">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 reveal-on-scroll">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Handpicked Selections</span>
+                                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy mt-1">
+                                    Featured Product Recommendations
+                                </h2>
+                                <p class="text-brand-muted text-sm sm:text-base mt-2 max-w-2xl">
+                                    Sample demonstration listings showcasing product structure and research-based overviews prior to live Amazon Associates product linking.
+                                </p>
+                            </div>
+                            <a href="#products" onclick="navigateTo('products'); return false;" class="inline-flex items-center justify-center gap-2 bg-brand-navy hover:bg-brand-navyLight text-white text-sm font-semibold px-5 py-3 rounded-xl transition-colors shrink-0">
+                                <span>Search & Filter All Products</span>
+                                <i class="fa-solid fa-sliders text-brand-orange text-xs"></i>
+                            </a>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 reveal-on-scroll">
+                            ${featuredProducts.map(prod => renderProductCard(prod)).join('')}
+                        </div>
+                    </div>
+                </section>
+
+                <!-- EDITORIAL BUYING GUIDES SECTION -->
+                <section id="buying-guides-section" class="py-16 sm:py-24 bg-white">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 reveal-on-scroll">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">In-Depth Reading</span>
+                                <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy mt-1">
+                                    Practical Buying Guides
+                                </h2>
+                                <p class="text-brand-muted text-base mt-2 max-w-2xl">
+                                    Structured articles to help you compare features, avoid unnecessary extras, and choose products suited to your needs.
+                                </p>
+                            </div>
+                            <a href="#buying-guides" onclick="navigateTo('buying-guides'); return false;" class="inline-flex items-center gap-2 text-sm font-bold text-brand-navy hover:text-brand-orange transition-colors">
+                                <span>Browse All Guides</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 reveal-on-scroll">
+                            ${featuredGuides.map(guide => renderGuideCard(guide)).join('')}
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ABOUT SECTION ("Meet Lokesh Naidu") -->
+                <section id="about-section" class="py-16 sm:py-24 bg-brand-surface border-t border-brand-border/70">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <div class="bg-white rounded-3xl border border-brand-border shadow-card p-6 sm:p-10 lg:p-14 reveal-on-scroll">
+                            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                                <!-- Profile Image -->
+                                <div class="lg:col-span-4 flex justify-center">
+                                    <div class="w-64 sm:w-72 aspect-[4/5] rounded-2xl overflow-hidden shadow-lg border-4 border-brand-surface bg-brand-surface">
+                                        <img src="${ownerProfile.profileImage}" 
+                                             alt="${ownerProfile.fullName}" 
+                                             loading="lazy"
+                                             onerror="this.onerror=null;this.src='${ownerProfile.fallbackAvatar}';"
+                                             class="w-full h-full object-cover object-top">
+                                    </div>
+                                </div>
+
+                                <!-- Bio Content -->
+                                <div class="lg:col-span-8 space-y-5">
+                                    <div class="inline-flex items-center gap-2 bg-brand-navy/5 text-brand-navy px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                                        <i class="fa-solid fa-user text-brand-orange"></i>
+                                        <span>About the Curator</span>
+                                    </div>
+
+                                    <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy">
+                                        Meet Lokesh Naidu
+                                    </h2>
+
+                                    <p class="text-sm font-semibold text-brand-orange uppercase tracking-wide">
+                                        ${ownerProfile.fullName}
+                                    </p>
+
+                                    <div class="space-y-4 text-base text-brand-text leading-relaxed">
+                                        <p>
+                                            Welcome! I'm Lokesh, and I share product recommendations and discoveries across different areas of everyday life.
+                                        </p>
+                                        <p>
+                                            From technology and electronics to household essentials, fitness-inspired food choices, clothing, books, and outdoor equipment, my goal is to help you discover products that suit your interests and everyday needs.
+                                        </p>
+                                    </div>
+
+                                    <div class="pt-3 flex flex-wrap items-center gap-4">
+                                        <a href="#products" onclick="navigateTo('products'); return false;" class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-brand-navy font-bold text-sm px-6 py-3.5 rounded-xl shadow-xs transition-all duration-200">
+                                            <span>Explore My Recommendations</span>
+                                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                                        </a>
+                                        <a href="${ownerProfile.facebookUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#1877F2] hover:bg-[#166FE5] text-white font-semibold text-sm px-5 py-3.5 rounded-xl transition-colors">
+                                            <i class="fa-brands fa-facebook text-base"></i>
+                                            <span>Follow on Facebook</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW 2: ALL CATEGORIES PAGE (categories.html)
+        function renderAllCategoriesView() {
+            return `
+                <section class="bg-brand-navy text-white py-14 sm:py-20">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <nav class="text-xs text-gray-300 mb-4 flex items-center gap-2">
+                            <a href="#home" onclick="navigateTo('home'); return false;" class="hover:text-brand-orange">Home</a>
+                            <span>/</span>
+                            <span class="text-white font-semibold">Categories</span>
+                        </nav>
+                        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl">All Product Categories</h1>
+                        <p class="text-gray-300 text-base sm:text-lg mt-3 max-w-2xl">
+                            Browse all seven curated product categories spanning everyday home essentials, technology, fitness, books, clothing, and outdoor gear.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="py-14 sm:py-20 bg-brand-surface">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 space-y-8">
+                        ${categoriesData.map(cat => {
+                            const count = productsData.filter(p => p.category === cat.id).length;
+                            return `
+                                <div class="bg-white rounded-3xl border border-brand-border shadow-soft overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+                                    <div class="lg:col-span-4 h-64 lg:h-auto relative bg-brand-surface">
+                                        <img src="${cat.image}" alt="${cat.name}" onerror="this.onerror=null;this.src='${cat.fallback}';" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="lg:col-span-8 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+                                        <div>
+                                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                                <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-orange">
+                                                    <i class="fa-solid ${cat.icon}"></i>
+                                                    <span>Category Collection</span>
+                                                </span>
+                                                <span class="text-xs font-medium bg-brand-surface px-3 py-1 rounded-full text-brand-muted border border-brand-border">
+                                                    ${count} Featured Listing${count === 1 ? '' : 's'}
+                                                </span>
+                                            </div>
+                                            <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-brand-navy mb-3">${cat.name}</h2>
+                                            <p class="text-brand-muted text-base leading-relaxed mb-5">${cat.description}</p>
+                                            <div class="mb-6">
+                                                <p class="text-xs font-bold uppercase tracking-wider text-brand-navy mb-2.5">What You'll Find:</p>
+                                                <div class="flex flex-wrap gap-2">
+                                                    ${cat.highlights.map(item => `
+                                                        <span class="inline-flex items-center gap-1.5 text-xs font-medium bg-brand-surface text-brand-text px-3 py-1.5 rounded-lg border border-brand-border">
+                                                            <i class="fa-solid fa-check text-brand-orange text-[10px]"></i>
+                                                            ${item}
+                                                        </span>
+                                                    `).join('')}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-brand-border">
+                                            <a href="#category/${cat.id}" onclick="navigateTo('category', '${cat.id}'); return false;" class="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navyLight text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors">
+                                                <span>Explore ${cat.name}</span>
+                                                <i class="fa-solid fa-arrow-right text-xs text-brand-orange"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW 3: SINGLE CATEGORY PAGE (category.html)
+        function renderSingleCategoryView(categoryId) {
+            const category = getCategoryById(categoryId || 'electronics');
+            const categoryProducts = productsData.filter(p => p.category === category.id);
+            const relatedGuides = buyingGuidesData.filter(g => g.category === category.id);
+
+            return `
+                <section class="relative bg-brand-navy text-white py-14 sm:py-20 overflow-hidden">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+                        <nav class="text-xs text-gray-300 mb-4 flex items-center gap-2">
+                            <a href="#home" onclick="navigateTo('home'); return false;" class="hover:text-brand-orange">Home</a>
+                            <span>/</span>
+                            <a href="#categories" onclick="navigateTo('categories'); return false;" class="hover:text-brand-orange">Categories</a>
+                            <span>/</span>
+                            <span class="text-white font-semibold">${category.name}</span>
+                        </nav>
+                        <div class="inline-flex items-center gap-2 bg-white/10 text-brand-orange px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                            <i class="fa-solid ${category.icon}"></i>
+                            <span>Category Recommendations</span>
+                        </div>
+                        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl">${category.name}</h1>
+                        <p class="text-gray-300 text-base sm:text-lg mt-3 max-w-2xl">${category.description}</p>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            ${category.highlights.map(h => `
+                                <span class="text-xs bg-white/10 border border-white/15 text-gray-100 px-3 py-1.5 rounded-lg">${h}</span>
+                            `).join('')}
+                        </div>
+                    </div>
+                </section>
+
+                <section class="py-14 sm:py-20 bg-brand-surface">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+                            <h2 class="font-heading font-bold text-2xl text-brand-navy">
+                                Recommended in ${category.name} (${categoryProducts.length})
+                            </h2>
+                            <a href="#products" onclick="navigateTo('products'); return false;" class="text-sm font-semibold text-brand-navy hover:text-brand-orange">
+                                View All Categories &rarr;
+                            </a>
+                        </div>
+
+                        ${categoryProducts.length > 0 ? `
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                                ${categoryProducts.map(p => renderProductCard(p)).join('')}
+                            </div>
+                        ` : `
+                            <div class="bg-white rounded-2xl border border-brand-border p-10 text-center">
+                                <p class="text-brand-muted">More recommendations for this category are currently being curated.</p>
+                            </div>
+                        `}
+
+                        ${relatedGuides.length > 0 ? `
+                            <div class="mt-16 pt-12 border-t border-brand-border">
+                                <h3 class="font-heading font-bold text-2xl text-brand-navy mb-6">Related Buying Guides</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    ${relatedGuides.map(g => renderGuideCard(g)).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW 4: ALL PRODUCTS & SEARCH/FILTER PAGE (products.html)
+        function renderAllProductsView() {
+            const filtered = getFilteredAndSortedProducts();
+
+            return `
+                <section class="bg-brand-navy text-white py-12 sm:py-16">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <nav class="text-xs text-gray-300 mb-3 flex items-center gap-2">
+                            <a href="#home" onclick="navigateTo('home'); return false;" class="hover:text-brand-orange">Home</a>
+                            <span>/</span>
+                            <span class="text-white font-semibold">All Recommendations</span>
+                        </nav>
+                        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl">Product Recommendations</h1>
+                        <p class="text-gray-300 text-base mt-3 max-w-2xl">
+                            Search by product name or keyword, filter across all seven categories, and explore research-based product overviews.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="py-10 sm:py-14 bg-brand-surface">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        
+                        <!-- Filter & Search Control Bar -->
+                        <div class="bg-white p-4 sm:p-6 rounded-2xl border border-brand-border shadow-soft mb-8 space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+                                <!-- Search Input -->
+                                <div class="md:col-span-6 relative">
+                                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-brand-muted"></i>
+                                    <input type="text" 
+                                           id="catalog-search-input" 
+                                           value="${escapeHtml(appState.searchQuery)}"
+                                           placeholder="Search products, features, or categories..." 
+                                           oninput="updateCatalogSearch(this.value)"
+                                           class="w-full pl-11 pr-4 py-3 rounded-xl border border-brand-border text-sm text-brand-text focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20">
+                                </div>
+
+                                <!-- Sort Dropdown -->
+                                <div class="md:col-span-4">
+                                    <select id="catalog-sort-select" 
+                                            onchange="updateCatalogSort(this.value)"
+                                            aria-label="Sort products"
+                                            class="w-full px-4 py-3 rounded-xl border border-brand-border text-sm text-brand-text bg-white focus:outline-none focus:border-brand-orange">
+                                        <option value="featured" ${appState.sortBy === 'featured' ? 'selected' : ''}>Sort: Featured First</option>
+                                        <option value="name-asc" ${appState.sortBy === 'name-asc' ? 'selected' : ''}>Sort: Name (A to Z)</option>
+                                        <option value="name-desc" ${appState.sortBy === 'name-desc' ? 'selected' : ''}>Sort: Name (Z to A)</option>
+                                        <option value="category" ${appState.sortBy === 'category' ? 'selected' : ''}>Sort: By Category</option>
+                                    </select>
+                                </div>
+
+                                <!-- Clear Filters Button -->
+                                <div class="md:col-span-2">
+                                    <button type="button" onclick="clearCatalogFilters()" class="w-full h-full py-3 px-4 rounded-xl bg-brand-surface hover:bg-gray-200 text-brand-navy font-semibold text-sm transition-colors">
+                                        Clear Filters
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Category Filter Buttons -->
+                            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pt-2 border-t border-brand-border/60">
+                                <button type="button" 
+                                        onclick="updateCatalogCategory('all')"
+                                        class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors ${appState.selectedCategory === 'all' ? 'bg-brand-navy text-white' : 'bg-brand-surface text-brand-text hover:bg-gray-200'}">
+                                    All Categories (${productsData.length})
+                                </button>
+                                ${categoriesData.map(cat => {
+                                    const active = appState.selectedCategory === cat.id;
+                                    return `
+                                        <button type="button" 
+                                                onclick="updateCatalogCategory('${cat.id}')"
+                                                class="px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors ${active ? 'bg-brand-orange text-brand-navy' : 'bg-brand-surface text-brand-text hover:bg-gray-200'}">
+                                            ${cat.shortName}
+                                        </button>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Results Count -->
+                        <div class="flex items-center justify-between mb-6">
+                            <p id="catalog-results-count" class="text-sm text-brand-muted font-medium">
+                                Showing <strong class="text-brand-navy">${filtered.length}</strong> matching recommendation${filtered.length === 1 ? '' : 's'}
+                            </p>
+                        </div>
+
+                        <!-- Results Grid -->
+                        <div id="catalog-products-grid">
+                            ${renderCatalogGridHtml(filtered)}
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        function renderCatalogGridHtml(products) {
+            if (products.length === 0) {
+                return `
+                    <div class="bg-white rounded-3xl border border-brand-border p-12 text-center max-w-xl mx-auto shadow-soft">
+                        <div class="w-16 h-16 rounded-2xl bg-brand-surface text-brand-orange flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-brand-navy mb-2">No Matching Products Found</h3>
+                        <p class="text-sm text-brand-muted mb-6">
+                            Try adjusting your search keywords or clearing your category filter to view all curated recommendations.
+                        </p>
+                        <button type="button" onclick="clearCatalogFilters()" class="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navyLight text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors">
+                            <span>Reset All Filters</span>
+                        </button>
+                    </div>
+                `;
+            }
+
+            return `
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    ${products.map(p => renderProductCard(p)).join('')}
+                </div>
+            `;
+        }
+
+        // VIEW 5: PRODUCT DETAILS & RESEARCH-BASED OVERVIEW PAGE (product-details.html)
+        function renderProductDetailsView(productId) {
+            const product = getProductById(productId);
+            const category = getCategoryById(product.category);
+            const outboundUrl = buildAmazonOutboundUrl(product);
+            const relatedProducts = productsData.filter(p => p.category === product.category && p.id !== product.id).slice(0, 3);
+
+            return `
+                <section class="bg-brand-surface border-b border-brand-border py-4">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <nav class="text-xs text-brand-muted flex flex-wrap items-center gap-2">
+                            <a href="#home" onclick="navigateTo('home'); return false;" class="hover:text-brand-orange">Home</a>
+                            <span>/</span>
+                            <a href="#products" onclick="navigateTo('products'); return false;" class="hover:text-brand-orange">Products</a>
+                            <span>/</span>
+                            <a href="#category/${category.id}" onclick="navigateTo('category', '${category.id}'); return false;" class="hover:text-brand-orange">${category.name}</a>
+                            <span>/</span>
+                            <span class="text-brand-navy font-semibold truncate max-w-xs">${product.name}</span>
+                        </nav>
+                    </div>
+                </section>
+
+                <section class="py-10 sm:py-16 bg-white">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        
+                        <!-- Top Product Hero Card -->
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start pb-14 border-b border-brand-border">
+                            <!-- Left Image -->
+                            <div class="lg:col-span-6">
+                                <div class="relative rounded-3xl overflow-hidden border border-brand-border bg-brand-surface shadow-soft aspect-[4/3]">
+                                    <img src="${product.image}" 
+                                         alt="${product.name}" 
+                                         onerror="this.onerror=null;this.src='${product.fallback}';"
+                                         class="w-full h-full object-cover">
+                                    <span class="absolute top-4 left-4 bg-brand-navy text-white text-xs font-bold px-3.5 py-1.5 rounded-full">
+                                        ${product.overviewType}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Right Summary & CTA -->
+                            <div class="lg:col-span-6 space-y-5">
+                                <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-orange">
+                                    <i class="fa-solid ${category.icon}"></i>
+                                    <span>${category.name}</span>
+                                </div>
+
+                                <h1 class="font-heading font-extrabold text-2xl sm:text-4xl text-brand-navy leading-tight">
+                                    ${product.name}
+                                </h1>
+
+                                <p class="text-base text-brand-text leading-relaxed">
+                                    ${product.introduction}
+                                </p>
+
+                                <div class="bg-brand-surface p-4 rounded-2xl border border-brand-border text-xs text-brand-muted space-y-1.5">
+                                    <p class="font-semibold text-brand-navy">
+                                        <i class="fa-solid fa-circle-info text-brand-orange mr-1.5"></i>
+                                        Transparency & Pricing Notice
+                                    </p>
+                                    <p>
+                                        This listing is a clearly labeled sample demonstration item. Current pricing, availability, and verified buyer reviews should be checked directly on Amazon via the button below. As an Amazon Associate, I earn from qualifying purchases.
+                                    </p>
+                                </div>
+
+                                <div class="pt-2 flex flex-col sm:flex-row gap-3.5">
+                                    <a href="${outboundUrl}" 
+                                       target="_blank" 
+                                       rel="nofollow sponsored noopener"
+                                       onclick="handleAffiliateButtonClick(event, '${product.id}')"
+                                       class="inline-flex items-center justify-center gap-2.5 bg-brand-orange hover:bg-brand-orangeHover text-brand-navy font-bold text-base px-8 py-4 rounded-xl shadow-md transition-all duration-200 hover:-translate-y-0.5">
+                                        <span>Check Availability on Amazon</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+                                    </a>
+                                    <a href="#reviews" onclick="navigateTo('reviews'); return false;" class="inline-flex items-center justify-center gap-2 bg-brand-surface hover:bg-gray-200 text-brand-navy font-semibold text-sm px-6 py-4 rounded-xl transition-colors">
+                                        <span>All Product Overviews</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Structured Evaluation Grid -->
+                        <div class="py-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
+                            <!-- Key Features & Editorial Assessment -->
+                            <div class="lg:col-span-7 space-y-8">
+                                <div class="bg-brand-surface rounded-2xl p-6 sm:p-8 border border-brand-border">
+                                    <h2 class="font-heading font-bold text-xl text-brand-navy mb-4 flex items-center gap-2">
+                                        <i class="fa-solid fa-list-check text-brand-orange"></i>
+                                        <span>Key Features & Specifications</span>
+                                    </h2>
+                                    <ul class="space-y-3">
+                                        ${product.features.map(feat => `
+                                            <li class="flex items-start gap-3 text-sm sm:text-base text-brand-text">
+                                                <i class="fa-solid fa-circle-check text-brand-orange mt-1"></i>
+                                                <span>${feat}</span>
+                                            </li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+
+                                <!-- Pros & Cons -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="bg-emerald-50/60 border border-emerald-200 rounded-2xl p-6">
+                                        <h3 class="font-heading font-bold text-lg text-emerald-900 mb-3 flex items-center gap-2">
+                                            <i class="fa-solid fa-thumbs-up text-emerald-600"></i>
+                                            <span>Notable Strengths</span>
+                                        </h3>
+                                        <ul class="space-y-2.5 text-sm text-emerald-950">
+                                            ${product.pros.map(pro => `
+                                                <li class="flex items-start gap-2">
+                                                    <span class="font-bold text-emerald-600">+</span>
+                                                    <span>${pro}</span>
+                                                </li>
+                                            `).join('')}
+                                        </ul>
+                                    </div>
+
+                                    <div class="bg-amber-50/60 border border-amber-200 rounded-2xl p-6">
+                                        <h3 class="font-heading font-bold text-lg text-amber-950 mb-3 flex items-center gap-2">
+                                            <i class="fa-solid fa-scale-balanced text-amber-600"></i>
+                                            <span>Considerations</span>
+                                        </h3>
+                                        <ul class="space-y-2.5 text-sm text-amber-950">
+                                            ${product.cons.map(con => `
+                                                <li class="flex items-start gap-2">
+                                                    <span class="font-bold text-amber-600">&minus;</span>
+                                                    <span>${con}</span>
+                                                </li>
+                                            `).join('')}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Who Should Buy / Research Assessment -->
+                            <div class="lg:col-span-5 space-y-6">
+                                <div class="bg-white rounded-2xl p-6 border border-brand-border shadow-soft">
+                                    <h3 class="font-heading font-bold text-lg text-brand-navy mb-2 flex items-center gap-2">
+                                        <i class="fa-solid fa-user-check text-brand-orange"></i>
+                                        <span>Who Should Consider This</span>
+                                    </h3>
+                                    <p class="text-sm text-brand-muted leading-relaxed">${product.whoShouldBuy}</p>
+                                </div>
+
+                                <div class="bg-white rounded-2xl p-6 border border-brand-border shadow-soft">
+                                    <h3 class="font-heading font-bold text-lg text-brand-navy mb-2 flex items-center gap-2">
+                                        <i class="fa-solid fa-user-xmark text-brand-muted"></i>
+                                        <span>Who May Not Need This</span>
+                                    </h3>
+                                    <p class="text-sm text-brand-muted leading-relaxed">${product.whoMayNotNeed}</p>
+                                </div>
+
+                                <div class="bg-brand-navy text-white rounded-2xl p-6 shadow-card">
+                                    <span class="text-[11px] font-bold uppercase tracking-wider text-brand-orange">Editorial Assessment</span>
+                                    <h3 class="font-heading font-bold text-lg mt-1 mb-2">Research Summary</h3>
+                                    <p class="text-sm text-gray-200 leading-relaxed mb-5">
+                                        ${product.editorialAssessment}
+                                    </p>
+                                    <a href="${outboundUrl}" 
+                                       target="_blank" 
+                                       rel="nofollow sponsored noopener"
+                                       onclick="handleAffiliateButtonClick(event, '${product.id}')"
+                                       class="inline-flex items-center justify-center gap-2 w-full bg-brand-orange hover:bg-brand-orangeHover text-brand-navy font-bold text-sm py-3 px-4 rounded-xl transition-colors">
+                                        <span>View on Amazon</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        ${relatedProducts.length > 0 ? `
+                            <div class="pt-12 border-t border-brand-border">
+                                <h2 class="font-heading font-bold text-2xl text-brand-navy mb-6">More in ${category.name}</h2>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    ${relatedProducts.map(p => renderProductCard(p)).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW 6: PRODUCT REVIEWS / RESEARCH-BASED OVERVIEWS PAGE (reviews.html)
+        function renderProductReviewsView() {
+            return `
+                <section class="bg-brand-navy text-white py-14 sm:py-20">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <nav class="text-xs text-gray-300 mb-4 flex items-center gap-2">
+                            <a href="#home" onclick="navigateTo('home'); return false;" class="hover:text-brand-orange">Home</a>
+                            <span>/</span>
+                            <span class="text-white font-semibold">Product Reviews & Overviews</span>
+                        </nav>
+                        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl">Product Overviews & Reviews</h1>
+                        <p class="text-gray-300 text-base sm:text-lg mt-3 max-w-3xl">
+                            Structured, research-based product overviews highlighting key specifications, pros and cons, and who each item is best suited for.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="py-14 sm:py-20 bg-brand-surface">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10 space-y-8">
+                        ${productsData.map(prod => {
+                            const cat = getCategoryById(prod.category);
+                            const outboundUrl = buildAmazonOutboundUrl(prod);
+                            return `
+                                <article class="bg-white rounded-3xl border border-brand-border shadow-soft overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+                                    <div class="lg:col-span-4 relative bg-brand-surface min-h-[240px]">
+                                        <img src="${prod.image}" alt="${prod.name}" loading="lazy" onerror="this.onerror=null;this.src='${prod.fallback}';" class="w-full h-full object-cover">
+                                        <span class="absolute top-4 left-4 bg-brand-navy text-white text-xs font-bold px-3 py-1 rounded-full">
+                                            ${cat.shortName}
+                                        </span>
+                                    </div>
+                                    <div class="lg:col-span-8 p-6 sm:p-8 flex flex-col justify-between">
+                                        <div>
+                                            <div class="flex flex-wrap items-center gap-2 text-xs text-brand-muted mb-2">
+                                                <span class="font-bold text-brand-orange uppercase tracking-wider">${prod.overviewType}</span>
+                                                <span>&bull;</span>
+                                                <span>Sample Demonstration Listing</span>
+                                            </div>
+                                            <h2 class="font-heading font-bold text-2xl text-brand-navy mb-3">
+                                                <a href="#product-details/${prod.id}" onclick="navigateTo('product-details', '${prod.id}'); return false;" class="hover:text-brand-orange transition-colors">
+                                                    ${prod.name}
+                                                </a>
+                                            </h2>
+                                            <p class="text-sm sm:text-base text-brand-text leading-relaxed mb-4">
+                                                ${prod.introduction}
+                                            </p>
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-brand-surface p-4 rounded-2xl border border-brand-border/70 mb-5 text-xs">
+                                                <div>
+                                                    <p class="font-bold text-brand-navy mb-1">Best Suited For:</p>
+                                                    <p class="text-brand-muted">${prod.whoShouldBuy}</p>
+                                                </div>
+                                                <div>
+                                                    <p class="font-bold text-brand-navy mb-1">Editorial Takeaway:</p>
+                                                    <p class="text-brand-muted">${prod.editorialAssessment}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-brand-border">
+                                            <a href="#product-details/${prod.id}" onclick="navigateTo('product-details', '${prod.id}'); return false;" class="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navyLight text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors">
+                                                <span>Read Full Overview</span>
+                                                <i class="fa-solid fa-arrow-right text-xs text-brand-orange"></i>
+                                            </a>
+                                            <a href="${outboundUrl}" target="_blank" rel="nofollow sponsored noopener" onclick="handleAffiliateButtonClick(event, '${prod.id}')" class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-brand-navy font-bold text-sm px-5 py-2.5 rounded-xl transition-colors">
+                                                <span>View on Amazon</span>
+                                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            `;
+                        }).join('')}
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW 7: BUYING GUIDES INDEX PAGE (buying-guides.html)
+        function renderBuyingGuidesView() {
+            return `
+                <section class="bg-brand-navy text-white py-14 sm:py-20">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <nav class="text-xs text-gray-300 mb-4 flex items-center gap-2">
+                            <a href="#home" onclick="navigateTo('home'); return false;" class="hover:text-brand-orange">Home</a>
+                            <span>/</span>
+                            <span class="text-white font-semibold">Buying Guides</span>
+                        </nav>
+                        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl">Editorial Buying Guides</h1>
+                        <p class="text-gray-300 text-base sm:text-lg mt-3 max-w-2xl">
+                            Practical, easy-to-read shopping guides across workspace technology, camping gear, home organization, fitness, books, and clothing.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="py-14 sm:py-20 bg-brand-surface">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                            ${buyingGuidesData.map(g => renderGuideCard(g)).join('')}
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW 8: SINGLE BUYING GUIDE ARTICLE READER (article.html)
+        function renderArticleView(guideId) {
+            const guide = getGuideById(guideId);
+            const category = getCategoryById(guide.category);
+            const recommendedProducts = guide.recommendedProductIds.map(id => getProductById(id));
+
+            return `
+                <article class="bg-white">
+                    <!-- Article Header -->
+                    <header class="bg-brand-surface border-b border-brand-border py-12 sm:py-16">
+                        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                            <nav class="text-xs text-brand-muted mb-5 flex items-center gap-2">
+                                <a href="#home" onclick="navigateTo('home'); return false;" class="hover:text-brand-orange">Home</a>
+                                <span>/</span>
+                                <a href="#buying-guides" onclick="navigateTo('buying-guides'); return false;" class="hover:text-brand-orange">Buying Guides</a>
+                                <span>/</span>
+                                <span class="text-brand-navy font-semibold">${category.shortName}</span>
+                            </nav>
+
+                            <span class="inline-flex items-center gap-2 bg-brand-orange/15 text-brand-navy text-xs font-bold px-3.5 py-1.5 rounded-full mb-4">
+                                <i class="fa-solid ${category.icon} text-brand-orange"></i>
+                                <span>${category.name}</span>
+                            </span>
+
+                            <h1 class="font-heading font-extrabold text-3xl sm:text-5xl text-brand-navy leading-tight mb-5">
+                                ${guide.title}
+                            </h1>
+
+                            <p class="text-lg text-brand-muted leading-relaxed mb-6">
+                                ${guide.excerpt}
+                            </p>
+
+                            <div class="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-brand-border text-xs text-brand-muted">
+                                <div class="flex items-center gap-3">
+                                    <img src="${ownerProfile.profileImage}" alt="${ownerProfile.fullName}" onerror="this.onerror=null;this.src='${ownerProfile.fallbackAvatar}';" class="w-10 h-10 rounded-full object-cover object-top border border-brand-border">
+                                    <div>
+                                        <p class="font-bold text-brand-navy text-sm">${ownerProfile.fullName}</p>
+                                        <p>${guide.date} &bull; ${guide.readTime}</p>
+                                    </div>
+                                </div>
+                                <a href="#buying-guides" onclick="navigateTo('buying-guides'); return false;" class="font-semibold text-brand-navy hover:text-brand-orange">
+                                    &larr; Back to All Guides
+                                </a>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Featured Hero Image -->
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6 -mt-6 sm:-mt-8">
+                        <div class="rounded-3xl overflow-hidden shadow-card border border-brand-border aspect-[16/9] bg-brand-surface">
+                            <img src="${guide.image}" alt="${guide.title}" onerror="this.onerror=null;this.src='${guide.fallback}';" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Readable Editorial Body -->
+                    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-10">
+                        <div class="bg-brand-surface p-4 rounded-xl border border-brand-border text-xs text-brand-muted">
+                            <strong class="text-brand-navy">Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases.
+                        </div>
+
+                        ${guide.sections.map(sec => `
+                            <section class="space-y-3">
+                                <h2 class="font-heading font-bold text-2xl text-brand-navy">${sec.heading}</h2>
+                                <p class="text-base sm:text-lg text-brand-text leading-relaxed">${sec.body}</p>
+                            </section>
+                        `).join('')}
+                    </div>
+
+                    <!-- Product Recommendation Area inside Article -->
+                    <section class="bg-brand-surface border-t border-brand-border py-14 sm:py-16">
+                        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                            <div class="mb-8">
+                                <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">Related Selections</span>
+                                <h2 class="font-heading font-extrabold text-2xl sm:text-3xl text-brand-navy mt-1">
+                                    Products Mentioned in This Guide
+                                </h2>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                ${recommendedProducts.map(p => renderProductCard(p)).join('')}
+                            </div>
+                        </div>
+                    </section>
+                </article>
+            `;
+        }
+
+        // VIEW 9: ABOUT PAGE (about.html)
+        function renderAboutView() {
+            return `
+                <section class="bg-brand-navy text-white py-14 sm:py-20">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <nav class="text-xs text-gray-300 mb-4 flex items-center gap-2">
+                            <a href="#home" onclick="navigateTo('home'); return false;" class="hover:text-brand-orange">Home</a>
+                            <span>/</span>
+                            <span class="text-white font-semibold">About Me</span>
+                        </nav>
+                        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl">Meet Lokesh Naidu</h1>
+                        <p class="text-gray-300 text-base sm:text-lg mt-3 max-w-2xl">
+                            Sharing practical product discoveries and straightforward buying guides across everyday life.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="py-14 sm:py-20 bg-white">
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                            <!-- Left Profile Card -->
+                            <div class="lg:col-span-5">
+                                <div class="bg-brand-surface p-4 rounded-3xl border border-brand-border shadow-card">
+                                    <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-white">
+                                        <img src="${ownerProfile.profileImage}" 
+                                             alt="${ownerProfile.fullName}" 
+                                             onerror="this.onerror=null;this.src='${ownerProfile.fallbackAvatar}';"
+                                             class="w-full h-full object-cover object-top">
+                                    </div>
+                                    <div class="pt-5 px-2 pb-2 text-center">
+                                        <h2 class="font-heading font-extrabold text-xl text-brand-navy">${ownerProfile.fullName}</h2>
+                                        <p class="text-xs text-brand-muted mt-1">Founder & Curator, LOKESH NAIDU</p>
+                                        <div class="mt-4">
+                                            <a href="${ownerProfile.facebookUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full bg-[#1877F2] hover:bg-[#166FE5] text-white font-semibold text-sm py-3 px-4 rounded-xl transition-colors">
+                                                <i class="fa-brands fa-facebook text-base"></i>
+                                                <span>Connect on Facebook</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Narrative -->
+                            <div class="lg:col-span-7 space-y-6">
+                                <span class="inline-flex items-center gap-2 bg-brand-orange/15 text-brand-navy text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+                                    Welcome & Mission
+                                </span>
+                                <h2 class="font-heading font-extrabold text-3xl text-brand-navy leading-tight">
+                                    Helping You Make Smarter Everyday Shopping Decisions
+                                </h2>
+                                <div class="space-y-4 text-base text-brand-text leading-relaxed">
+                                    <p>
+                                        Welcome! I'm Lokesh, and I share product recommendations and discoveries across different areas of everyday life.
+                                    </p>
+                                    <p>
+                                        From technology and electronics to household essentials, fitness-inspired food choices, clothing, books, and outdoor equipment, my goal is to help you discover products that suit your interests and everyday needs.
+                                    </p>
+                                    <p>
+                                        Shopping online often means sorting through thousands of options and confusing specifications. On this website, products are organized cleanly by category and paired with practical buying guides that highlight key features, pros and cons, and who a product is best suited for.
+                                    </p>
+                                </div>
+
+                                <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border space-y-2">
+                                    <h3 class="font-heading font-bold text-base text-brand-navy">Editorial Transparency</h3>
+                                    <p class="text-sm text-brand-muted leading-relaxed">
+                                        As an Amazon Associate, I earn from qualifying purchases. Recommendations on this site are presented transparently—without fabricated prices, invented ratings, or exaggerated claims—so you can evaluate each option clearly before visiting Amazon.
+                                    </p>
+                                </div>
+
+                                <div class="pt-2 flex flex-wrap gap-3">
+                                    <a href="#products" onclick="navigateTo('products'); return false;" class="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-brand-navy font-bold text-sm px-6 py-3.5 rounded-xl transition-colors">
+                                        <span>Explore My Recommendations</span>
+                                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                                    </a>
+                                    <a href="#contact" onclick="navigateTo('contact'); return false;" class="inline-flex items-center gap-2 bg-brand-navy hover:bg-brand-navyLight text-white font-semibold text-sm px-6 py-3.5 rounded-xl transition-colors">
+                                        <span>Get in Touch</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW 10: CONTACT PAGE (contact.html)
+        function renderContactView() {
+            return `
+                <section class="bg-brand-navy text-white py-14 sm:py-20">
+                    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <nav class="text-xs text-gray-300 mb-4 flex items-center gap-2">
+                            <a href="#home" onclick="navigateTo('home'); return false;" class="hover:text-brand-orange">Home</a>
+                            <span>/</span>
+                            <span class="text-white font-semibold">Contact</span>
+                        </nav>
+                        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl">Let's Connect</h1>
+                        <p class="text-gray-300 text-base sm:text-lg mt-3 max-w-2xl">
+                            Have a product recommendation, question, or suggestion? Feel free to connect with me.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="py-14 sm:py-20 bg-brand-surface">
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                            
+                            <!-- Left Contact Info & Facebook Option -->
+                            <div class="lg:col-span-5 space-y-6">
+                                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-brand-border shadow-soft space-y-5">
+                                    <h2 class="font-heading font-bold text-2xl text-brand-navy">Direct Connection</h2>
+                                    <p class="text-sm text-brand-muted leading-relaxed">
+                                        Whether you have a category you would like covered in an upcoming buying guide or a general question about the site, you can reach out directly via Facebook or use the message form.
+                                    </p>
+
+                                    <div class="pt-2">
+                                        <a href="${ownerProfile.facebookUrl}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 w-full bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold text-sm py-3.5 px-5 rounded-xl shadow-xs transition-colors">
+                                            <i class="fa-brands fa-facebook text-lg"></i>
+                                            <span>Message or Follow on Facebook</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="pt-4 border-t border-brand-border text-xs text-brand-muted space-y-2">
+                                        <p class="font-semibold text-brand-navy">Form Notice:</p>
+                                        <p>
+                                            This contact form validates your input in the browser. Because this website runs as a static frontend without a live mail server configured yet, please connect via Facebook if you require an immediate reply.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Validated Contact Form -->
+                            <div class="lg:col-span-7">
+                                <div class="bg-white p-6 sm:p-8 lg:p-10 rounded-3xl border border-brand-border shadow-soft">
+                                    <form id="contact-form" onsubmit="handleContactSubmit(event)" novalidate class="space-y-5">
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                            <div>
+                                                <label for="contact-name" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Your Name *</label>
+                                                <input type="text" id="contact-name" required placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl border border-brand-border text-sm text-brand-text focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20">
+                                                <p id="err-name" class="text-xs text-red-600 mt-1 hidden">Please enter your name.</p>
+                                            </div>
+
+                                            <div>
+                                                <label for="contact-email" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Email Address *</label>
+                                                <input type="email" id="contact-email" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-brand-border text-sm text-brand-text focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20">
+                                                <p id="err-email" class="text-xs text-red-600 mt-1 hidden">Please enter a valid email address.</p>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label for="contact-subject" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Subject *</label>
+                                            <input type="text" id="contact-subject" required placeholder="Product suggestion, buying guide topic, or question" class="w-full px-4 py-3 rounded-xl border border-brand-border text-sm text-brand-text focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20">
+                                            <p id="err-subject" class="text-xs text-red-600 mt-1 hidden">Please enter a subject.</p>
+                                        </div>
+
+                                        <div>
+                                            <label for="contact-message" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Message *</label>
+                                            <textarea id="contact-message" rows="5" required placeholder="Write your message here..." class="w-full px-4 py-3 rounded-xl border border-brand-border text-sm text-brand-text focus:outline-none focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20"></textarea>
+                                            <p id="err-message" class="text-xs text-red-600 mt-1 hidden">Please enter a message (at least 10 characters).</p>
+                                        </div>
+
+                                        <button type="submit" class="inline-flex items-center justify-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-brand-navy font-bold text-sm px-8 py-4 rounded-xl shadow-xs transition-all duration-200">
+                                            <span>Validate & Preview Message</span>
+                                            <i class="fa-solid fa-paper-plane text-xs"></i>
+                                        </button>
+
+                                        <div id="contact-feedback" class="hidden p-4 rounded-2xl border text-sm leading-relaxed"></div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW 11: AFFILIATE DISCLOSURE PAGE (affiliate-disclosure.html)
+        function renderAffiliateDisclosureView() {
+            return `
+                <section class="bg-brand-navy text-white py-14">
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                        <h1 class="font-heading font-extrabold text-3xl sm:text-4xl">Affiliate Disclosure</h1>
+                        <p class="text-gray-300 text-sm mt-2">Transparency & Amazon Associates Program Compliance</p>
+                    </div>
+                </section>
+                <section class="py-14 bg-white">
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-6 text-brand-text leading-relaxed">
+                        <div class="bg-brand-surface p-6 rounded-2xl border border-brand-border">
+                            <p class="font-bold text-brand-navy text-lg mb-2">Required Disclosure Statement</p>
+                            <p class="text-brand-text">
+                                <strong>As an Amazon Associate, I earn from qualifying purchases.</strong>
+                            </p>
+                        </div>
+
+                        <h2 class="font-heading font-bold text-2xl text-brand-navy pt-2">How Affiliate Links Work on LOKESH NAIDU</h2>
+                        <p>
+                            This website, operated by <strong>Lokesh Deenadayalan Naidu</strong>, participates in affiliate marketing programs designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon properties.
+                        </p>
+                        <p>
+                            When you click on a "View on Amazon" or product recommendation link on this website and make a qualifying purchase on Amazon, this site may receive a small referral commission at <strong>zero additional cost to you</strong>. The price you pay on Amazon remains exactly the same whether you use an affiliate link or visit Amazon directly.
+                        </p>
+
+                        <h2 class="font-heading font-bold text-2xl text-brand-navy pt-2">Editorial Integrity & Product Accuracy</h2>
+                        <ul class="list-disc pl-6 space-y-2 text-brand-text">
+                            <li>We do not fabricate product prices, star ratings, discount percentages, or customer review counts.</li>
+                            <li>Sample demonstration listings are clearly marked until live Amazon Associates links are configured.</li>
+                            <li>Product overviews are research-based guides intended to help readers evaluate features and suitability.</li>
+                            <li>Always verify current pricing, availability, specifications, and seller details directly on Amazon prior to purchase.</li>
+                        </ul>
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW 12: PRIVACY POLICY PAGE (privacy-policy.html)
+        function renderPrivacyPolicyView() {
+            return `
+                <section class="bg-brand-navy text-white py-14">
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                        <h1 class="font-heading font-extrabold text-3xl sm:text-4xl">Privacy Policy</h1>
+                        <p class="text-gray-300 text-sm mt-2">Last Updated: 2026 &bull; LOKESH NAIDU</p>
+                    </div>
+                </section>
+                <section class="py-14 bg-white">
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-6 text-brand-text leading-relaxed">
+                        <h2 class="font-heading font-bold text-2xl text-brand-navy">1. Overview</h2>
+                        <p>
+                            Your privacy is important. This Privacy Policy explains how <strong>LOKESH NAIDU</strong> (operated by Lokesh Deenadayalan Naidu) handles information when you browse this website.
+                        </p>
+
+                        <h2 class="font-heading font-bold text-2xl text-brand-navy">2. Information You Voluntarily Provide</h2>
+                        <p>
+                            If you use the contact form on this website, you may enter your name, email address, subject, and message. This information is validated locally in your browser and is not sold or shared with third-party data brokers.
+                        </p>
+
+                        <h2 class="font-heading font-bold text-2xl text-brand-navy">3. Third-Party Links & Amazon Associates</h2>
+                        <p>
+                            This website contains outbound links to Amazon and Facebook. Once you click an external link and leave this website, you are subject to the privacy policies and cookie practices of those respective platforms (such as Amazon's Privacy Notice). Amazon may use cookies to track referrals for qualifying purchases under the Amazon Associates Program.
+                        </p>
+
+                        <h2 class="font-heading font-bold text-2xl text-brand-navy">4. Contact</h2>
+                        <p>
+                            If you have questions regarding this Privacy Policy, you may connect via the <a href="#contact" onclick="navigateTo('contact'); return false;" class="text-brand-orange font-semibold underline">Contact page</a>.
+                        </p>
+                    </div>
+                </section>
+            `;
+        }
+
+        // VIEW 13: TERMS AND CONDITIONS PAGE (terms.html)
+        function renderTermsView() {
+            return `
+                <section class="bg-brand-navy text-white py-14">
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                        <h1 class="font-heading font-extrabold text-3xl sm:text-4xl">Terms and Conditions</h1>
+                        <p class="text-gray-300 text-sm mt-2">Effective Year: 2026 &bull; LOKESH NAIDU</p>
+                    </div>
+                </section>
+                <section class="py-14 bg-white">
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6 space-y-6 text-brand-text leading-relaxed">
+                        <h2 class="font-heading font-bold text-2xl text-brand-navy">1. Acceptance of Terms</h2>
+                        <p>
+                            By accessing and browsing <strong>LOKESH NAIDU</strong>, you agree to these Terms and Conditions. All content on this website is provided for general informational and educational purposes.
+                        </p>
+
+                        <h2 class="font-heading font-bold text-2xl text-brand-navy">2. No Professional or Medical Advice</h2>
+                        <p>
+                            Buying guides, product overviews, and category descriptions—including those in Healthy Diet & Food, Sports, Electronics, and Household Items—do not constitute medical, nutritional, financial, or professional engineering advice.
+                        </p>
+
+                        <h2 class="font-heading font-bold text-2xl text-brand-navy">3. External Merchant Transactions</h2>
+                        <p>
+                            We do not sell products directly, process payments, or ship merchandise. All purchases are completed directly on Amazon or the respective third-party merchant website, subject to their terms of sale, return policies, and warranties.
+                        </p>
+
+                        <h2 class="font-heading font-bold text-2xl text-brand-navy">4. Intellectual Property</h2>
+                        <p>
+                            Copyright &copy; 2026 Lokesh Naidu. All rights reserved. Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.
+                        </p>
+                    </div>
+                </section>
+            `;
+        }
+
+        /**
+         * 10. SEARCH, FILTERING & SORTING LOGIC
+         */
+        function getFilteredAndSortedProducts() {
+            const query = appState.searchQuery.trim().toLowerCase();
+            let list = productsData.filter(prod => {
+                const cat = getCategoryById(prod.category);
+                const matchesCategory = appState.selectedCategory === 'all' || prod.category === appState.selectedCategory;
+                const matchesQuery = !query || 
+                    prod.name.toLowerCase().includes(query) ||
+                    prod.shortDescription.toLowerCase().includes(query) ||
+                    cat.name.toLowerCase().includes(query) ||
+                    prod.features.some(f => f.toLowerCase().includes(query));
+                return matchesCategory && matchesQuery;
+            });
+
+            if (appState.sortBy === 'name-asc') {
+                list.sort((a, b) => a.name.localeCompare(b.name));
+            } else if (appState.sortBy === 'name-desc') {
+                list.sort((a, b) => b.name.localeCompare(a.name));
+            } else if (appState.sortBy === 'category') {
+                list.sort((a, b) => a.category.localeCompare(b.category));
+            } else {
+                list.sort((a, b) => (b.featured === true) - (a.featured === true));
+            }
+
+            return list;
+        }
+
+        function updateCatalogSearch(value) {
+            appState.searchQuery = value;
+            refreshCatalogResultsOnly();
+        }
+
+        function updateCatalogCategory(catId) {
+            appState.selectedCategory = catId;
+            renderCurrentRoute();
+        }
+
+        function updateCatalogSort(sortVal) {
+            appState.sortBy = sortVal;
+            refreshCatalogResultsOnly();
+        }
+
+        function clearCatalogFilters() {
+            appState.searchQuery = '';
+            appState.selectedCategory = 'all';
+            appState.sortBy = 'featured';
+            renderCurrentRoute();
+        }
+
+        function refreshCatalogResultsOnly() {
+            const filtered = getFilteredAndSortedProducts();
+            const countEl = document.getElementById('catalog-results-count');
+            const gridEl = document.getElementById('catalog-products-grid');
+            if (countEl) {
+                countEl.innerHTML = `Showing <strong class="text-brand-navy">${filtered.length}</strong> matching recommendation${filtered.length === 1 ? '' : 's'}`;
+            }
+            if (gridEl) {
+                gridEl.innerHTML = renderCatalogGridHtml(filtered);
+            }
+        }
+
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        /**
+         * 11. GLOBAL QUICK SEARCH MODAL
+         */
+        function toggleSearchModal(open) {
+            const modal = document.getElementById('search-modal');
+            const input = document.getElementById('global-search-input');
+            if (open) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                populateQuickSearchTags();
+                setTimeout(() => input.focus(), 50);
+            } else {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+        }
+
+        function populateQuickSearchTags() {
+            const container = document.getElementById('search-quick-tags');
+            if (!container) return;
+            container.innerHTML = categoriesData.map(cat => `
+                <button type="button" onclick="toggleSearchModal(false); navigateTo('category', '${cat.id}')" class="px-3 py-1.5 rounded-lg bg-white border border-brand-border hover:border-brand-orange text-xs font-semibold text-brand-navy transition-colors">
+                    <i class="fa-solid ${cat.icon} text-brand-orange mr-1"></i> ${cat.name}
+                </button>
+            `).join('');
+        }
+
+        function handleGlobalSearch(query) {
+            const resultsContainer = document.getElementById('global-search-results');
+            const q = query.trim().toLowerCase();
+
+            if (!q) {
+                resultsContainer.innerHTML = `
+                    <p class="text-xs font-semibold uppercase tracking-wider text-brand-muted mb-3">Quick Category Jumps</p>
+                    <div class="flex flex-wrap gap-2" id="search-quick-tags"></div>
+                `;
+                populateQuickSearchTags();
+                return;
+            }
+
+            const matchedProducts = productsData.filter(p =>
+                p.name.toLowerCase().includes(q) || p.shortDescription.toLowerCase().includes(q)
+            );
+            const matchedGuides = buyingGuidesData.filter(g =>
+                g.title.toLowerCase().includes(q) || g.excerpt.toLowerCase().includes(q)
+            );
+
+            if (matchedProducts.length === 0 && matchedGuides.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="text-center py-6">
+                        <p class="text-sm text-brand-muted">No instant matches for "<strong>${escapeHtml(query)}</strong>".</p>
+                        <button type="button" onclick="toggleSearchModal(false); appState.searchQuery='${escapeHtml(query)}'; navigateTo('products');" class="mt-3 text-xs font-bold text-brand-orange hover:underline">
+                            Search in Full Product Catalog &rarr;
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            if (matchedProducts.length > 0) {
+                html += `<p class="text-xs font-bold uppercase tracking-wider text-brand-muted mb-2">Matching Products (${matchedProducts.length})</p><div class="space-y-2 mb-4">`;
+                html += matchedProducts.slice(0, 4).map(p => `
+                    <button type="button" onclick="toggleSearchModal(false); navigateTo('product-details', '${p.id}')" class="w-full text-left p-3 rounded-xl bg-white hover:bg-brand-orange/10 border border-brand-border flex items-center justify-between gap-3 transition-colors">
+                        <div>
+                            <p class="text-sm font-bold text-brand-navy">${p.name}</p>
+                            <p class="text-xs text-brand-muted line-clamp-1">${p.shortDescription}</p>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-xs text-brand-muted"></i>
+                    </button>
+                `).join('');
+                html += `</div>`;
+            }
+
+            if (matchedGuides.length > 0) {
+                html += `<p class="text-xs font-bold uppercase tracking-wider text-brand-muted mb-2">Buying Guides (${matchedGuides.length})</p><div class="space-y-2">`;
+                html += matchedGuides.slice(0, 3).map(g => `
+                    <button type="button" onclick="toggleSearchModal(false); navigateTo('article', '${g.id}')" class="w-full text-left p-3 rounded-xl bg-white hover:bg-brand-orange/10 border border-brand-border flex items-center justify-between gap-3 transition-colors">
+                        <div>
+                            <p class="text-sm font-bold text-brand-navy">${g.title}</p>
+                            <p class="text-xs text-brand-muted line-clamp-1">${g.excerpt}</p>
+                        </div>
+                        <i class="fa-solid fa-book-open text-xs text-brand-orange"></i>
+                    </button>
+                `).join('');
+                html += `</div>`;
+            }
+
+            resultsContainer.innerHTML = html;
+        }
+
+        /**
+         * 12. CONTACT FORM VALIDATION
+         */
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('contact-name').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const subject = document.getElementById('contact-subject').value.trim();
+            const message = document.getElementById('contact-message').value.trim();
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            let valid = true;
+
+            document.getElementById('err-name').classList.toggle('hidden', name.length > 0);
+            if (!name) valid = false;
+
+            document.getElementById('err-email').classList.toggle('hidden', emailRegex.test(email));
+            if (!emailRegex.test(email)) valid = false;
+
+            document.getElementById('err-subject').classList.toggle('hidden', subject.length > 0);
+            if (!subject) valid = false;
+
+            document.getElementById('err-message').classList.toggle('hidden', message.length >= 10);
+            if (message.length < 10) valid = false;
+
+            const feedback = document.getElementById('contact-feedback');
+            feedback.classList.remove('hidden');
+
+            if (!valid) {
+                feedback.className = 'p-4 rounded-2xl border border-red-200 bg-red-50 text-red-800 text-sm leading-relaxed';
+                feedback.innerHTML = `<strong>Please check the highlighted fields above</strong> before submitting.`;
+                return;
+            }
+
+            feedback.className = 'p-4 rounded-2xl border border-amber-200 bg-amber-50 text-amber-950 text-sm leading-relaxed space-y-2';
+            feedback.innerHTML = `
+                <p class="font-bold"><i class="fa-solid fa-circle-check text-emerald-600 mr-1.5"></i>Form Validated Locally</p>
+                <p>Thank you, <strong>${escapeHtml(name)}</strong>! Your message regarding "<strong>${escapeHtml(subject)}</strong>" has been validated in your browser.</p>
+                <p class="text-xs text-amber-900">
+                    <strong>Note:</strong> Because this site does not have an email backend service connected yet, this message has not been transmitted over email. For direct communication, please reach out via <a href="${ownerProfile.facebookUrl}" target="_blank" rel="noopener noreferrer" class="underline font-bold text-[#1877F2]">Lokesh Naidu's Facebook Profile</a>.
+                </p>
+            `;
+        }
+
+        /**
+         * 13. MOBILE DRAWER & NAVIGATION ROUTER
+         */
+        function toggleMobileDrawer(open) {
+            const drawer = document.getElementById('mobile-drawer');
+            const backdrop = document.getElementById('mobile-drawer-backdrop');
+            const btn = document.getElementById('mobile-menu-btn');
+
+            if (open) {
+                backdrop.classList.remove('hidden');
+                setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+                drawer.classList.remove('translate-x-full');
+                btn.setAttribute('aria-expanded', 'true');
+            } else {
+                backdrop.classList.add('opacity-0');
+                drawer.classList.add('translate-x-full');
+                btn.setAttribute('aria-expanded', 'false');
+                setTimeout(() => backdrop.classList.add('hidden'), 300);
+            }
+        }
+
+        function navigateTo(route, param = null) {
+            appState.currentRoute = route;
+            appState.routeParam = param;
+
+            const newHash = param ? `#${route}/${param}` : `#${route}`;
+            if (window.location.hash !== newHash) {
+                history.pushState({ route, param }, '', newHash);
+            }
+
+            renderCurrentRoute();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function parseHashRoute() {
+            const rawHash = window.location.hash.replace(/^#/, '');
+            if (!rawHash) {
+                appState.currentRoute = 'home';
+                appState.routeParam = null;
+                return;
+            }
+            const parts = rawHash.split('/');
+            appState.currentRoute = parts[0] || 'home';
+            appState.routeParam = parts[1] || null;
+        }
+
+        function updateActiveNavHighlighting() {
+            const route = appState.currentRoute;
+            document.querySelectorAll('.nav-link').forEach(link => {
+                const target = link.getAttribute('data-nav');
+                const isMatch = target === route ||
+                    (target === 'categories' && route === 'category') ||
+                    (target === 'buying-guides' && route === 'article') ||
+                    (target === 'reviews' && route === 'product-details');
+
+                if (isMatch) {
+                    link.classList.add('text-brand-orange', 'bg-brand-surface', 'font-semibold');
+                    link.classList.remove('text-brand-text');
+                } else {
+                    link.classList.remove('text-brand-orange', 'bg-brand-surface', 'font-semibold');
+                    link.classList.add('text-brand-text');
+                }
+            });
+        }
+
+        function renderCurrentRoute() {
+            const root = document.getElementById('app-root');
+            if (!root) return;
+
+            const route = appState.currentRoute;
+            const param = appState.routeParam;
+
+            switch (route) {
+                case 'categories':
+                    root.innerHTML = renderAllCategoriesView();
+                    break;
+                case 'category':
+                    root.innerHTML = renderSingleCategoryView(param);
+                    break;
+                case 'products':
+                    root.innerHTML = renderAllProductsView();
+                    break;
+                case 'product-details':
+                    root.innerHTML = renderProductDetailsView(param);
+                    break;
+                case 'reviews':
+                    root.innerHTML = renderProductReviewsView();
+                    break;
+                case 'buying-guides':
+                    root.innerHTML = renderBuyingGuidesView();
+                    break;
+                case 'article':
+                    root.innerHTML = renderArticleView(param);
+                    break;
+                case 'about':
+                    root.innerHTML = renderAboutView();
+                    break;
+                case 'contact':
+                    root.innerHTML = renderContactView();
+                    break;
+                case 'affiliate-disclosure':
+                    root.innerHTML = renderAffiliateDisclosureView();
+                    break;
+                case 'privacy-policy':
+                    root.innerHTML = renderPrivacyPolicyView();
+                    break;
+                case 'terms':
+                    root.innerHTML = renderTermsView();
+                    break;
+                case 'home':
+                default:
+                    appState.currentRoute = 'home';
+                    root.innerHTML = renderHomeView();
+                    break;
+            }
+
+            updateActiveNavHighlighting();
+            initScrollRevealObserver();
+        }
+
+        /**
+         * 14. INTERSECTION OBSERVER & SCROLL LISTENERS
+         */
+        function initScrollRevealObserver() {
+            const elements = document.querySelectorAll('.reveal-on-scroll');
+            if (!('IntersectionObserver' in window)) {
+                elements.forEach(el => el.classList.add('is-visible'));
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            elements.forEach(el => observer.observe(el));
+        }
+
+        window.addEventListener('scroll', () => {
+            const backToTop = document.getElementById('back-to-top');
+            const header = document.getElementById('main-header');
+
+            if (window.scrollY > 360) {
+                backToTop.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                backToTop.classList.add('opacity-0', 'pointer-events-none');
+            }
+
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-soft');
+            } else {
+                header.classList.remove('shadow-soft');
+            }
+        });
+
+        window.addEventListener('hashchange', () => {
+            parseHashRoute();
+            renderCurrentRoute();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                toggleSearchModal(false);
+                toggleMobileDrawer(false);
+                closeInfoModal();
+                closeProjectBlueprintModal();
+            }
+        });
+
+        // Initialize Immediately on DOM Ready
+        document.addEventListener('DOMContentLoaded', () => {
+            parseHashRoute();
+            renderCurrentRoute();
+        });
+    </script>
+</body>
+</html>
